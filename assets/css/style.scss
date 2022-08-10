@@ -6,6 +6,14 @@ Author: uigigs
 Author URL: http://www.uigigs.com/
 version: 1.0.0
 */
+/*-------------------
+CSS table of content
+
+01. Header Section
+02. Banner Section
+03. Footer Section
+
+-----------------*/
 
 /* Bootstrap v5.2.0 Default styles region start */
 
@@ -70,6 +78,7 @@ p {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+    font-family: $secondaryFont;
 }
 
 ::selection {
@@ -156,7 +165,7 @@ img {
 /*-- mixin End --*/
 
 
-/*-- Header Section Start --*/
+/*-- 01. Header Section Start --*/
 .header-section{
     height: 130px;
     width: 100%;
@@ -210,16 +219,10 @@ img {
                 & .header-top-left{
                     padding-left: 50px;
                     & p {
+                        @include text-style(14px, 500, 17px, rgba(255, 255, 255, 0.8));
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
-                        font-family: 'Inter';
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 17px;
-                        color: rgba(255, 255, 255, 0.8);
-
                         & span {
                             margin-right: 20px;
                         }
@@ -354,5 +357,250 @@ img {
         }
     }
 }
-
 /*-- Header Section End --*/
+
+/*-- 02. Banner Section Start --*/
+.banner-slider-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Slideshow container */
+    .slideshow-container {
+        width: 100%;
+        max-height: 750px;
+        position: relative;
+        margin: auto;
+
+        & .prev,
+        & .next {
+            display: none;
+        }
+        & .mySlides {
+            display: none;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+            /* Caption text */
+            & .text {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 30%;
+                & button{
+                    background: #EE2840;
+                    border-radius: 100px;
+                    width: 80px;
+                    height: 25px;
+                    padding: 5px 15px;
+                    line-height: 14px;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    margin-bottom: 33px;
+                }
+
+                & h2 {
+                    max-width: 780px;
+                    width: 100%;
+                    margin: auto;
+                    color: #ffffff;
+                    font-size: 55px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    
+    /* The dots/bullets/indicators */
+    & .slide-btns {
+        position: absolute;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        width: 330px;
+        bottom: 60px;
+
+        & .dot {
+            cursor: pointer;
+            height: 66px;
+            width: 66px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+            background: transparent;
+            &.active, 
+            &:hover{
+                background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, rgba(255, 255, 255, 0) 360deg); 
+                & img{
+                    filter: saturate(50%);
+                }
+            }
+
+            & img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                filter: saturate(0%);
+            }
+        }
+    }
+
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/*-- Banner Section End --*/
+
+.match-schedule-section{
+    background: url(../images/bg/match-schedule-bg.svg);
+    min-height: 370px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-- 03. Footer Section Start --*/
+.footer-area {
+    background: #14151A;
+    & .footer-section {
+        height: auto;
+        background: url(../images/bg/footer-bg.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: relative;
+        & .footer-shape1{
+            position: absolute;
+            left: 70px;
+            bottom: 160px;
+        }
+        & .footer-shape2{
+            position: absolute;
+            right: 70px;
+            bottom: 160px;
+        }
+        & .sponsors-logo{
+            padding: 45px 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            & ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & li{
+                    width: auto;
+                }
+            }
+        }
+        & .footer-social-link-list{
+            padding: 70px 0px;
+            & ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & li{
+                    width: 18%;
+                    & .footer-link-card{
+                        width: 100%;
+                        height: 130px;
+                        background: rgba(255, 255, 255, 0.05);
+                        backdrop-filter: blur(5px);
+                        padding: 25px;
+                        & .footer-logo{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        & h6{
+                            @include text-style(16px, 400, 24px, #FFFFFF);
+                            margin-top: 17px;
+                            text-transform: uppercase;
+                        }
+                        & p{
+                            @include text-style(14px, 500, 24px, rgba(255, 255, 255, 0.8));
+                        }
+                    }
+                }
+            }
+        }
+        & .main-footer{
+            padding: 35px 0px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            & .main-footer-content{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .footer-menu{
+                    width: 45%;
+                    & ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        & li {
+                            margin-right: 15px;
+                            & a {
+                                @include text-style(14px, 500, 20px, rgba(255, 255, 255, 0.8));
+                                font-family: $secondaryFont;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                text-align: left;
+                                &:after{
+                                    content: '.';
+                                    margin-left: 15px;
+                                }
+                            }
+                            &:nth-last-child(1){
+                                margin-right: 0px;
+                                & a{
+                                    &:after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                & .back-to-top{
+                    width: 10%;
+                    margin: auto;
+                    text-align: center;
+                }
+                & p{
+                    margin-left: auto;
+                    text-align: right;
+                    width: 45%;
+                    @include text-style(14px, 500, 20px, rgba(255, 255, 255, 0.8));
+                }
+            }
+        }
+    }
+}
+/*-- Footer Section End --*/

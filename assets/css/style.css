@@ -5,6 +5,14 @@ Author: uigigs
 Author URL: http://www.uigigs.com/
 version: 1.0.0
 */
+/*-------------------
+CSS table of content
+
+01. Header Section
+02. Banner Section
+03. Footer Section
+
+-----------------*/
 /* Bootstrap v5.2.0 Default styles region start */
 /*!
    * Bootstrap  v5.2.0 (https://getbootstrap.com/)
@@ -12540,6 +12548,7 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  font-family: "Inter", sans-serif;
 }
 
 ::-moz-selection {
@@ -12618,7 +12627,7 @@ img {
 /*-- text-style --*/
 /*-- Custom Card --*/
 /*-- mixin End --*/
-/*-- Header Section Start --*/
+/*-- 01. Header Section Start --*/
 .header-section {
   height: 130px;
   width: 100%;
@@ -12705,6 +12714,10 @@ img {
 }
 
 .header-section .main-header .header-content .header-top-content .header-top-left p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12714,12 +12727,6 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .header-section .main-header .header-content .header-top-content .header-top-left p span {
@@ -12899,4 +12906,357 @@ img {
 }
 
 /*-- Header Section End --*/
+/*-- 02. Banner Section Start --*/
+.banner-slider-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Slideshow container */
+  /* The dots/bullets/indicators */
+}
+
+.banner-slider-section .slideshow-container {
+  width: 100%;
+  max-height: 750px;
+  position: relative;
+  margin: auto;
+}
+
+.banner-slider-section .slideshow-container .prev,
+.banner-slider-section .slideshow-container .next {
+  display: none;
+}
+
+.banner-slider-section .slideshow-container .mySlides {
+  display: none;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  /* Caption text */
+}
+
+.banner-slider-section .slideshow-container .mySlides .text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+}
+
+.banner-slider-section .slideshow-container .mySlides .text button {
+  background: #EE2840;
+  border-radius: 100px;
+  width: 80px;
+  height: 25px;
+  padding: 5px 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+
+.banner-slider-section .slideshow-container .mySlides .text h2, .banner-slider-section .slideshow-container .mySlides .text .h2 {
+  max-width: 780px;
+  width: 100%;
+  margin: auto;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.banner-slider-section .slide-btns {
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  width: 330px;
+  bottom: 60px;
+}
+
+.banner-slider-section .slide-btns .dot {
+  cursor: pointer;
+  height: 66px;
+  width: 66px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px;
+  background: transparent;
+}
+
+.banner-slider-section .slide-btns .dot.active, .banner-slider-section .slide-btns .dot:hover {
+  background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, rgba(255, 255, 255, 0) 360deg);
+}
+
+.banner-slider-section .slide-btns .dot.active img, .banner-slider-section .slide-btns .dot:hover img {
+  -webkit-filter: saturate(50%);
+          filter: saturate(50%);
+}
+
+.banner-slider-section .slide-btns .dot img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*-- Banner Section End --*/
+.match-schedule-section {
+  background: url(../images/bg/match-schedule-bg.svg);
+  min-height: 370px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-- 03. Footer Section Start --*/
+.footer-area {
+  background: #14151A;
+}
+
+.footer-area .footer-section {
+  height: auto;
+  background: url(../images/bg/footer-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+
+.footer-area .footer-section .footer-shape1 {
+  position: absolute;
+  left: 70px;
+  bottom: 160px;
+}
+
+.footer-area .footer-section .footer-shape2 {
+  position: absolute;
+  right: 70px;
+  bottom: 160px;
+}
+
+.footer-area .footer-section .sponsors-logo {
+  padding: 45px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-area .footer-section .sponsors-logo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-area .footer-section .sponsors-logo ul li {
+  width: auto;
+}
+
+.footer-area .footer-section .footer-social-link-list {
+  padding: 70px 0px;
+}
+
+.footer-area .footer-section .footer-social-link-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li {
+  width: 18%;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li .footer-link-card {
+  width: 100%;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 25px;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li .footer-link-card .footer-logo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li .footer-link-card h6, .footer-area .footer-section .footer-social-link-list ul li .footer-link-card .h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 17px;
+  text-transform: uppercase;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li .footer-link-card p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-area .footer-section .main-footer {
+  padding: 35px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-area .footer-section .main-footer .main-footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu {
+  width: 45%;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul li {
+  margin-right: 15px;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Inter", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  text-align: left;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul li a:after {
+  content: '.';
+  margin-left: 15px;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul li:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .footer-menu ul li:nth-last-child(1) a:after {
+  display: none;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content .back-to-top {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-area .footer-section .main-footer .main-footer-content p {
+  margin-left: auto;
+  text-align: right;
+  width: 45%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*-- Footer Section End --*/
 /*# sourceMappingURL=style.css.map */
