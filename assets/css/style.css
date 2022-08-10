@@ -12919,14 +12919,22 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   /* Slideshow container */
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* Caption text */
   /* The dots/bullets/indicators */
 }
 
-.banner-slider-section .mySlides {
+.banner-slider-section .slideshow-container {
+  width: 100%;
+  max-height: 750px;
+  position: relative;
+  margin: auto;
+}
+
+.banner-slider-section .slideshow-container .prev,
+.banner-slider-section .slideshow-container .next {
+  display: none;
+}
+
+.banner-slider-section .slideshow-container .mySlides {
   display: none;
   opacity: 1;
   display: -webkit-box;
@@ -12939,36 +12947,29 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  /* Caption text */
 }
 
-.banner-slider-section img {
-  vertical-align: middle;
-}
-
-.banner-slider-section .slideshow-container {
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-.banner-slider-section .prev,
-.banner-slider-section .next {
-  display: none;
-}
-
-.banner-slider-section .prev:hover,
-.banner-slider-section .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.banner-slider-section .text {
+.banner-slider-section .slideshow-container .mySlides .text {
   position: absolute;
   width: 100%;
   text-align: center;
   top: 30%;
 }
 
-.banner-slider-section .text h2, .banner-slider-section .text .h2 {
+.banner-slider-section .slideshow-container .mySlides .text button {
+  background: #EE2840;
+  border-radius: 100px;
+  width: 80px;
+  height: 25px;
+  padding: 5px 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+
+.banner-slider-section .slideshow-container .mySlides .text h2, .banner-slider-section .slideshow-container .mySlides .text .h2 {
   max-width: 780px;
   width: 100%;
   margin: auto;
@@ -13033,7 +13034,41 @@ img {
 }
 
 /* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*-- Banner Section End --*/
+.match-schedule-section {
+  background: url(../images/bg/match-schedule-bg.svg);
+  min-height: 370px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*-- 03. Footer Section Start --*/
 .footer-area {
   background: #14151A;

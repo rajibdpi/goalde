@@ -365,76 +365,60 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    .mySlides {
-        display: none;
-        opacity: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    img {
-        vertical-align: middle;
-    }
-
+    
     /* Slideshow container */
     .slideshow-container {
         width: 100%;
+        max-height: 750px;
         position: relative;
         margin: auto;
-    }
 
-    /* Next & previous buttons */
-    .prev,
-    .next {
-//        cursor: pointer;
-//        position: absolute;
-//        top: 50%;
-//        width: auto;
-//        padding: 16px;
-//        margin-top: -22px;
-//        color: white;
-//        font-weight: bold;
-//        font-size: 18px;
-//        transition: 0.6s ease;
-//        border-radius: 0 3px 3px 0;
-//        user-select: none;
-        display: none;
-    }
+        & .prev,
+        & .next {
+            display: none;
+        }
+        & .mySlides {
+            display: none;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+            /* Caption text */
+            & .text {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 30%;
+                & button{
+                    background: #EE2840;
+                    border-radius: 100px;
+                    width: 80px;
+                    height: 25px;
+                    padding: 5px 15px;
+                    line-height: 14px;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    margin-bottom: 33px;
+                }
 
-    /* Position the "next button" to the right */
-//    .next {
-//        right: 0;
-//        border-radius: 3px 0 0 3px;
-//    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Caption text */
-    .text {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        top: 30%;
-        & h2{
-            max-width: 780px;
-            width: 100%;
-            margin: auto;
-            color: #ffffff;
-            font-size: 55px;
-            font-weight: 400;
-            line-height: 100%;
-            text-transform: uppercase;
+                & h2 {
+                    max-width: 780px;
+                    width: 100%;
+                    margin: auto;
+                    color: #ffffff;
+                    font-size: 55px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                }
+            }
         }
     }
     
     /* The dots/bullets/indicators */
-    .slide-btns {
+    & .slide-btns {
         position: absolute;
         text-align: center;
         display: flex;
@@ -475,22 +459,30 @@ img {
 }
 
 /* Fading animation */
-//.fade {
-//  animation-name: fade;
-//  animation-duration: 1.5s;
-//}
-//
-//@keyframes fade {
-//  from {opacity: .4} 
-//  to {opacity: 1}
-//}
-//
-///* On smaller screens, decrease text size */
-//@media only screen and (max-width: 300px) {
-//  .prev, .next,.text {font-size: 11px}
-//}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
 
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
 /*-- Banner Section End --*/
+
+.match-schedule-section{
+    background: url(../images/bg/match-schedule-bg.svg);
+    min-height: 370px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*-- 03. Footer Section Start --*/
 .footer-area {
