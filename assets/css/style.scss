@@ -11,6 +11,9 @@ CSS table of content
 
 01. Header Section
 02. Banner Section
+    2.1. Banner Section
+    2.2. match schedule section
+    2.3. Featured News section
 03. Footer Section
 
 -----------------*/
@@ -41,6 +44,7 @@ body {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+    background: #F3F3F3;
 }
 
 html {
@@ -164,6 +168,46 @@ img {
 }
 /*-- mixin End --*/
 
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*-- content card --*/
+.content-card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    & .card-headings {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 70px;
+        padding: 12px 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        &:after{
+            content: url(../images/icon/title-icon.svg);
+            position: absolute;
+            left: 0px;
+            height: 20px;
+        }
+        & h2 {
+            @include text-style(24px, 400, 24px, #111111);
+        }
+    }
+}
 
 /*-- 1. Header Section Start --*/
 .header-section{
@@ -458,25 +502,9 @@ img {
     }
 
 }
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
 /*-- Banner Section End --*/
 
-/*-- 2.2 match schedule section --*/
+/*-- 2.2. match schedule section start --*/
 .upcoming-match-section {
     background: url(../images/bg/upcoming-match-bg.svg);
     min-height: 370px;
@@ -598,7 +626,65 @@ img {
         }
     }
 }
+/*-- match schedule section End --*/
 
+/*-- 2.3. Featured News section start --*/
+.featured-news-section{
+    margin-bottom: 30px;
+    padding: 70px 0px;
+    & .featured-news-content{
+        position: relative;
+        overflow: hidden;
+        & .featured-news-img{
+            max-height: 406px;
+            width: 100%;
+            & img{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+        .featured-news-text{
+            position: absolute;
+            bottom: 22px;
+            left: 24px;
+            & button {
+                background: #EE2840;
+                border-radius: 100px;
+                width: 80px;
+                height: 25px;
+                padding: 5px 15px;
+                line-height: 14px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
+            & h3{
+                @include text-style(30px, 400, 40px, #FFFFFF);
+                margin-bottom: 17px;
+                max-width: 520px;
+                width: 100%;
+            }
+            & ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 157px;
+                width: 100%;
+                & li{
+                    a{
+                        @include text-style(14px, 500, 20px, rgba(255, 255, 255, 0.8));
+                        & span{
+                            margin-right: 18px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+/*-- Featured News section End --*/
 
 /*-- 03. Footer Section Start --*/
 .footer-area {
