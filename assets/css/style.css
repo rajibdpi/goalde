@@ -10,6 +10,9 @@ CSS table of content
 
 01. Header Section
 02. Banner Section
+    2.1. Banner Section
+    2.2. match schedule section
+    2.3. Featured News section
 03. Footer Section
 
 -----------------*/
@@ -12516,6 +12519,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  background: #F3F3F3;
 }
 
 html {
@@ -12627,6 +12631,70 @@ img {
 /*-- text-style --*/
 /*-- Custom Card --*/
 /*-- mixin End --*/
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*-- content card --*/
+.content-card {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.content-card .card-headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  height: 70px;
+  padding: 12px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.content-card .card-headings:after {
+  content: url(../images/icon/title-icon.svg);
+  position: absolute;
+  left: 0px;
+  height: 20px;
+}
+
+.content-card .card-headings h2, .content-card .card-headings .h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #111111;
+}
+
 /*-- 1. Header Section Start --*/
 .header-section {
   height: 130px;
@@ -13034,34 +13102,8 @@ img {
           filter: saturate(0%);
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /*-- Banner Section End --*/
-/*-- 2.2 match schedule section --*/
+/*-- 2.2. match schedule section start --*/
 .upcoming-match-section {
   background: url(../images/bg/upcoming-match-bg.svg);
   min-height: 370px;
@@ -13248,6 +13290,83 @@ img {
   letter-spacing: 0.01em;
 }
 
+/*-- match schedule section End --*/
+/*-- 2.3. Featured News section start --*/
+.featured-news-section {
+  margin-bottom: 30px;
+  padding: 70px 0px;
+}
+
+.featured-news-section .featured-news-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-news-section .featured-news-content .featured-news-img {
+  max-height: 406px;
+  width: 100%;
+}
+
+.featured-news-section .featured-news-content .featured-news-img img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.featured-news-section .featured-news-content .featured-news-text {
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+}
+
+.featured-news-section .featured-news-content .featured-news-text button {
+  background: #EE2840;
+  border-radius: 100px;
+  width: 80px;
+  height: 25px;
+  padding: 5px 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.featured-news-section .featured-news-content .featured-news-text h3, .featured-news-section .featured-news-content .featured-news-text .h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-bottom: 17px;
+  max-width: 520px;
+  width: 100%;
+}
+
+.featured-news-section .featured-news-content .featured-news-text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 157px;
+  width: 100%;
+}
+
+.featured-news-section .featured-news-content .featured-news-text ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.featured-news-section .featured-news-content .featured-news-text ul li a span {
+  margin-right: 18px;
+}
+
+/*-- Featured News section End --*/
 /*-- 03. Footer Section Start --*/
 .footer-area {
   background: #14151A;
