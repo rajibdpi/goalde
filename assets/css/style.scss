@@ -14,6 +14,11 @@ CSS table of content
     2.1. Banner Section
     2.2. match schedule section
     2.3. Featured News section
+    2.4. Latest Update Content
+    2.5. Latest Post
+    2.6. Latest Post List
+    2.7. time comment react section
+    2.8. Tranding popular post Section
 03. Footer Section
 
 -----------------*/
@@ -86,7 +91,7 @@ p {
 }
 
 ::selection {
-    background-color: #33efb0;
+    background-color: #EE2840;
     color: #ffffff;
 }
 
@@ -145,6 +150,10 @@ img {
 
 .uppercase{
     text-transform: uppercase !important;
+}
+
+.no-border{
+    border: none !important;
 }
 /*-- reset style end --*/
 
@@ -206,6 +215,46 @@ img {
         }
         & h2 {
             @include text-style(24px, 400, 24px, #111111);
+        }
+    }
+    &.dark-card {
+        background: #22232B;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+        & .card-headings {
+            & h2 {
+               color: #FFFFFF;
+            }
+        }
+    }
+}
+
+/*-- social share btns --*/
+.social-share-btns{
+    padding: 25px 25px 5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & button{
+        width: 46.4%; 
+        height: 50px;
+        padding: 10px 25px;
+        margin-bottom: 20px;
+        &.faceboob-btn{
+            background: rgba(24, 119, 242, 0.2);
+            color: #1877F2;
+        }
+        &.twitter-btn{
+            background: rgba(29, 161, 242, 0.2);
+            color: #1DA1F2;
+        }
+        &.reddit-btn{
+            background: rgba(255, 69, 0, 0.2);
+            color: #FF4500;
+        }
+        &.instagram-btn{
+            background: rgba(225, 48, 108, 0.2);
+            color: #E1306C;
         }
     }
 }
@@ -631,8 +680,7 @@ img {
 
 /*-- 2.3. Featured News section start --*/
 .featured-section{
-    margin-bottom: 30px;
-    padding: 70px 0px;
+    padding: 70px 0px 40px 0px;
     & .featured-content{
         position: relative;
         overflow: hidden;
@@ -668,14 +716,115 @@ img {
             }            
         }
     }
+    &.featured-section-dark{
+        background: url(../images/bg/featured-videos-bg.png);
+        height: 100%;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        & .content-card-content{
+            padding: 25px;
+        }
+    }
 }
 /*-- Featured News section End --*/
 
+/*-- 2.4 Latest Update Content --*/
+.latest-update-content{
+    padding: 24px;
+}
+
+/*-- 2.5 Latest Post --*/
+.latest-post{
+    & span {
+        width: 100%;
+        overflow: hidden;
+        max-height: 240px;
+        height: 100%;
+        & img {
+            width: 100%;
+            max-height: 240px;
+        }
+    }
+    & .latest-post-text{
+        & button {
+            @include text-style(14px, 400, 14px, #EE2840);
+            background: rgba(238, 40, 64, 0.15);
+            border-radius: 100px;
+            padding: 5px 15px;
+            margin-bottom: 12px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        & h3 {
+            @include text-style(24px, 400, 30px, #14151B);
+            margin-bottom: 12px;
+        }
+
+        & p {
+            @include text-style(14px, 500, 24px, #555555);
+            margin-bottom: 15px;
+            max-width: 339px;
+            width: 100%;
+        }
+        
+    }
+}
+
+/*-- 2.6 Latest Post List --*/
+.latest-post-list{
+    & ul {
+        &.latest-post-list-inner {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 25px;
+        }
+        & li{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            
+            & .latest-post-list-img{
+                margin-right: 15px;
+                & span{
+                    max-width: 120px;
+                    width: 100%;
+                    & img{
+                        width: 100%;
+                    }
+                }
+            }
+            & .latest-post-list-text{
+                max-width: 210px;
+                width: 100%;
+                & h4{
+                    @include text-style(16px, 400, 24px, #111111);
+                    margin-bottom: 13px;
+                }
+            }
+        }
+    }
+    &.latest-post-list-dark {
+        & ul {
+            & li {
+                & .latest-post-list-text {
+                    & h4 {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- 2.7 time comment react section --*/
 .time-comment-react-section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-width: 185px;
     width: 100%;
 
     & li {
@@ -702,105 +851,138 @@ img {
     }
 }
 
-.social-share-btns{
-    padding: 25px 25px 5px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    & button{
-        width: 46.4%; 
-        height: 50px;
-        padding: 10px 25px;
-        margin-bottom: 20px;
-        &.faceboob-btn{
-            background: rgba(24, 119, 242, 0.2);
-            color: #1877F2;
-        }
-        &.twitter-btn{
-            background: rgba(29, 161, 242, 0.2);
-            color: #1DA1F2;
-        }
-        &.reddit-btn{
-            background: rgba(255, 69, 0, 0.2);
-            color: #FF4500;
-        }
-        &.instagram-btn{
-            background: rgba(225, 48, 108, 0.2);
-            color: #E1306C;
-        }
+/*-- 2.8 Tranding popular post Section --*/
+.tranding-popular-post-section {
+    padding: 70px 0px 40px 0px;
+}
+/*-- tranding Content --*/
+.tranding-content {
+    padding: 0px 25px;
+
+    & .tranding-content-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-}
 
+    & .tranding-content-card {
+        width: 33.33333%;
 
-/*-- Latest Update Content --*/
-.latest-update-content{
-    padding: 24px;
-}
+        &:nth-last-child(1) {
+            & .tranding-text {
+                border-right: none;
+            }
+        }
 
-/*-- Latest Post --*/
-.latest-post{
-    & span {
-        width: 100%;
-        overflow: hidden;
-        & img {
+        & .tranding-img {
             width: 100%;
-        }
-    }
-    & .latest-post-text{
-        & button {
-            @include text-style(14px, 400, 14px, #EE2840);
-            background: rgba(238, 40, 64, 0.15);
-            border-radius: 100px;
-            padding: 5px 15px;
-            margin-bottom: 12px;
-            margin-top: 20px;
-        }
-        & h3 {
-            @include text-style(24px, 400, 30px, #14151B);
-            margin-bottom: 12px;
+
+            & img {
+                width: 100%;
+            }
         }
 
-        & p {
-            @include text-style(14px, 500, 24px, #555555);
-            margin-bottom: 15px;
-            max-width: 339px;
+        & .tranding-text {
+            padding: 25px 14px 22px 14px;
+            position: relative;
             width: 100%;
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+            & button {
+                @include text-style(14px, 400, 14px, #FFFFFF);
+                padding: 5px 15px;
+                background: #EE2840;
+                border-radius: 100px;
+                position: absolute;
+                top: -12.5px;
+                left: 15px;
+                text-transform: uppercase;
+            }
+
+            & h3 {
+                @include text-style(16px, 400, 24px, #111111);
+                max-width: 187px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
-        
     }
 }
 
-/*-- Latest Post List --*/
-.latest-post-list{
-    & ul {
-//        display: flex;
-//        align-items: flex-start;
-//        justify-content: flex-start;
-//        flex-direction: column;
-//        gap: 25px;
-        & li{
+/*-- popular posts content --*/
+.popular-posts-content{
+    padding: 0px 25px;
+}
+
+/*-- 2.9 Top Player Section --*/
+.top-player-section {
+    background: url(../images/bg/top-player-bg.png);
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0px 40px 0px;
+    & .top-player-content {
+        padding: 0px 25px 25px 25px;
+
+        & .top-player-card {
+            background: #14151B;
+            position: relative;
+            min-height: 320px;
+            width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-bottom: 25px;
-            
-            & .latest-post-list-img{
-                margin-right: 15px;
-                & span{
-                    max-width: 120px;
-                    width: 100%;
-                    & img{
-                        width: 100%;
-                    }
+            align-items: flex-end;
+            justify-content: center;
+
+            & .top-player-card-overlay {
+                background: linear-gradient(180deg, rgba(20, 21, 27, 0) 39.06%, #14151B 92.71%);
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+            }
+            & .top-player-img{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                & .player-bg-ellips{
+                    position: absolute;
+                    z-index: 0;
+                    top: -15px;
+                    left: 25px;
+                }
+                & .player-number{
+                    @include text-style(30px, 400, 30px, rgba(255, 255, 255, 0.2));
+                    position: absolute;
+                    top: -30px;
+                    right: 24px;
                 }
             }
-            & .latest-post-list-text{
-                max-width: 210px;
-                width: 100%;
-                & h4{
-                    @include text-style(16px, 400, 24px, #111111);
-                    margin-bottom: 13px;
+            & .top-player-text{
+                position: absolute;
+                z-index: 4;
+                bottom: 17px;
+                text-align: center;
+                & h5{
+                    @include text-style(18px, 400, 24px, #FFFFFF);
+                    margin-top: 13px;
+                }
+                & p{
+                    @include text-style(14px, 500, 24px, rgba(255, 255, 255, 0.8));
+                }
+            }
+            &:hover{
+                & .top-player-img{
+                    & h3{
+                        color: #FFFFFF;
+                    }
                 }
             }
         }
