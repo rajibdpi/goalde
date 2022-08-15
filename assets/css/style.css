@@ -13,6 +13,11 @@ CSS table of content
     2.1. Banner Section
     2.2. match schedule section
     2.3. Featured News section
+    2.4. Latest Update Content
+    2.5. Latest Post
+    2.6. Latest Post List
+    2.7. time comment react section
+    2.8. Tranding popular post Section
 03. Footer Section
 
 -----------------*/
@@ -12556,12 +12561,12 @@ p {
 }
 
 ::-moz-selection {
-  background-color: #33efb0;
+  background-color: #EE2840;
   color: #ffffff;
 }
 
 ::selection {
-  background-color: #33efb0;
+  background-color: #EE2840;
   color: #ffffff;
 }
 
@@ -12626,6 +12631,10 @@ img {
   text-transform: uppercase !important;
 }
 
+.no-border {
+  border: none !important;
+}
+
 /*-- reset style end --*/
 /*-- mixin Start --*/
 /*-- text-style --*/
@@ -12663,6 +12672,7 @@ img {
   -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .content-card .card-headings {
@@ -12693,6 +12703,59 @@ img {
   font-weight: 400;
   line-height: 24px;
   color: #111111;
+}
+
+.content-card.dark-card {
+  background: #22232B;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+}
+
+.content-card.dark-card .card-headings h2, .content-card.dark-card .card-headings .h2 {
+  color: #FFFFFF;
+}
+
+/*-- social share btns --*/
+.social-share-btns {
+  padding: 25px 25px 5px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.social-share-btns button {
+  width: 46.4%;
+  height: 50px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+
+.social-share-btns button.faceboob-btn {
+  background: rgba(24, 119, 242, 0.2);
+  color: #1877F2;
+}
+
+.social-share-btns button.twitter-btn {
+  background: rgba(29, 161, 242, 0.2);
+  color: #1DA1F2;
+}
+
+.social-share-btns button.reddit-btn {
+  background: rgba(255, 69, 0, 0.2);
+  color: #FF4500;
+}
+
+.social-share-btns button.instagram-btn {
+  background: rgba(225, 48, 108, 0.2);
+  color: #E1306C;
 }
 
 /*-- 1. Header Section Start --*/
@@ -13292,34 +13355,33 @@ img {
 
 /*-- match schedule section End --*/
 /*-- 2.3. Featured News section start --*/
-.featured-news-section {
-  margin-bottom: 30px;
-  padding: 70px 0px;
+.featured-section {
+  padding: 70px 0px 40px 0px;
 }
 
-.featured-news-section .featured-news-content {
+.featured-section .featured-content {
   position: relative;
   overflow: hidden;
 }
 
-.featured-news-section .featured-news-content .featured-news-img {
+.featured-section .featured-content .featured-img {
   max-height: 406px;
   width: 100%;
 }
 
-.featured-news-section .featured-news-content .featured-news-img img {
+.featured-section .featured-content .featured-img img {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.featured-news-section .featured-news-content .featured-news-text {
+.featured-section .featured-content .featured-text {
   position: absolute;
   bottom: 22px;
   left: 24px;
 }
 
-.featured-news-section .featured-news-content .featured-news-text button {
+.featured-section .featured-content .featured-text button {
   background: #EE2840;
   border-radius: 100px;
   width: 80px;
@@ -13331,7 +13393,7 @@ img {
   margin-bottom: 14px;
 }
 
-.featured-news-section .featured-news-content .featured-news-text h3, .featured-news-section .featured-news-content .featured-news-text .h3 {
+.featured-section .featured-content .featured-text h3, .featured-section .featured-content .featured-text .h3 {
   font-size: 30px;
   font-weight: 400;
   line-height: 40px;
@@ -13341,7 +13403,183 @@ img {
   width: 100%;
 }
 
-.featured-news-section .featured-news-content .featured-news-text ul {
+.featured-section.featured-section-dark {
+  background: url(../images/bg/featured-videos-bg.png);
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featured-section.featured-section-dark .content-card-content {
+  padding: 25px;
+}
+
+/*-- Featured News section End --*/
+/*-- 2.4 Latest Update Content --*/
+.latest-update-content {
+  padding: 24px;
+}
+
+/*-- 2.5 Latest Post --*/
+.latest-post span {
+  width: 100%;
+  overflow: hidden;
+  max-height: 240px;
+  height: 100%;
+}
+
+.latest-post span img {
+  width: 100%;
+  max-height: 240px;
+}
+
+.latest-post .latest-post-text button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #EE2840;
+  background: rgba(238, 40, 64, 0.15);
+  border-radius: 100px;
+  padding: 5px 15px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.latest-post .latest-post-text h3, .latest-post .latest-post-text .h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #14151B;
+  margin-bottom: 12px;
+}
+
+.latest-post .latest-post-text p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #555555;
+  margin-bottom: 15px;
+  max-width: 339px;
+  width: 100%;
+}
+
+/*-- 2.6 Latest Post List --*/
+.latest-post-list ul.latest-post-list-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.latest-post-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.latest-post-list ul li .latest-post-list-img {
+  margin-right: 15px;
+}
+
+.latest-post-list ul li .latest-post-list-img span {
+  max-width: 120px;
+  width: 100%;
+}
+
+.latest-post-list ul li .latest-post-list-img span img {
+  width: 100%;
+}
+
+.latest-post-list ul li .latest-post-list-text {
+  max-width: 210px;
+  width: 100%;
+}
+
+.latest-post-list ul li .latest-post-list-text h4, .latest-post-list ul li .latest-post-list-text .h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #111111;
+  margin-bottom: 13px;
+}
+
+.latest-post-list.latest-post-list-dark ul li .latest-post-list-text h4, .latest-post-list.latest-post-list-dark ul li .latest-post-list-text .h4 {
+  color: #FFFFFF;
+}
+
+/*-- 2.7 time comment react section --*/
+.time-comment-react-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.time-comment-react-section li {
+  margin-right: 18px;
+}
+
+.time-comment-react-section li:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.time-comment-react-section li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.time-comment-react-section li a span {
+  font-family: 'Inter';
+  margin-left: 10px;
+}
+
+.time-comment-react-section.deep a {
+  color: rgba(85, 85, 85, 0.8);
+}
+
+.time-comment-react-section.deep a img {
+  -webkit-filter: brightness(35%);
+          filter: brightness(35%);
+}
+
+/*-- 2.8 Tranding popular post Section --*/
+.tranding-popular-post-section {
+  padding: 70px 0px 40px 0px;
+}
+
+/*-- tranding Content --*/
+.tranding-content {
+  padding: 0px 25px;
+}
+
+.tranding-content .tranding-content-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13351,22 +13589,228 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 157px;
+}
+
+.tranding-content .tranding-content-card {
+  width: 33.33333%;
+}
+
+.tranding-content .tranding-content-card:nth-last-child(1) .tranding-text {
+  border-right: none;
+}
+
+.tranding-content .tranding-content-card .tranding-img {
   width: 100%;
 }
 
-.featured-news-section .featured-news-content .featured-news-text ul li a {
+.tranding-content .tranding-content-card .tranding-img img {
+  width: 100%;
+}
+
+.tranding-content .tranding-content-card .tranding-text {
+  padding: 25px 14px 22px 14px;
+  position: relative;
+  width: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.tranding-content .tranding-content-card .tranding-text button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+  padding: 5px 15px;
+  background: #EE2840;
+  border-radius: 100px;
+  position: absolute;
+  top: -12.5px;
+  left: 15px;
+  text-transform: uppercase;
+}
+
+.tranding-content .tranding-content-card .tranding-text h3, .tranding-content .tranding-content-card .tranding-text .h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #111111;
+  max-width: 187px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/*-- popular posts content --*/
+.popular-posts-content {
+  padding: 0px 25px;
+}
+
+/*-- 2.9 Top Player Section --*/
+.top-player-section {
+  background: url(../images/bg/top-player-bg.png);
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 0px 40px 0px;
+}
+
+.top-player-section .top-player-content {
+  padding: 0px 25px 25px 25px;
+}
+
+.top-player-section .top-player-content .top-player-card {
+  background: #14151B;
+  position: relative;
+  min-height: 320px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-card-overlay {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(39.06%, rgba(20, 21, 27, 0)), color-stop(92.71%, #14151B));
+  background: linear-gradient(180deg, rgba(20, 21, 27, 0) 39.06%, #14151B 92.71%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-img .player-bg-ellips {
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  left: 25px;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-img .player-number {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -30px;
+  right: 24px;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-text {
+  position: absolute;
+  z-index: 4;
+  bottom: 17px;
+  text-align: center;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-text h5, .top-player-section .top-player-content .top-player-card .top-player-text .h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 13px;
+}
+
+.top-player-section .top-player-content .top-player-card .top-player-text p {
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 24px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.featured-news-section .featured-news-content .featured-news-text ul li a span {
-  margin-right: 18px;
+.top-player-section .top-player-content .top-player-card:hover .top-player-img h3, .top-player-section .top-player-content .top-player-card:hover .top-player-img .h3 {
+  color: #FFFFFF;
 }
 
-/*-- Featured News section End --*/
+.footer-slider-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-slider-section .footer-slider-img {
+  max-width: 20%;
+  width: 100%;
+}
+
+.footer-slider-section .footer-slider-img span {
+  overflow: hidden;
+}
+
+.footer-slider-section .footer-slider-img span img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-slider-section .footer-slider-overlay1 {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
+  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+  z-index: 1;
+}
+
+.footer-slider-section .footer-slider-overlay2 {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: rgba(20, 21, 26, 0.5);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-slider-section .footer-slider-overlay3 {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  right: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
+  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+  z-index: 1;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 /*-- 03. Footer Section Start --*/
 .footer-area {
   background: #14151A;
