@@ -18,6 +18,10 @@ CSS table of content
     2.6. Latest Post List
     2.7. time comment react section
     2.8. Tranding popular post Section
+    2.9. Top Player Section
+    2.10 result table
+    2.11 point table section
+    2.12 best player pool
 03. Footer Section
 
 -----------------*/
@@ -12679,16 +12683,17 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  height: 70px;
-  padding: 12px 24px;
+  min-height: 70px;
+  padding: 18px 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  width: 100%;
 }
 
 .content-card .card-headings:after {
@@ -12696,6 +12701,7 @@ img {
   position: absolute;
   left: 0px;
   height: 20px;
+  top: 24px;
 }
 
 .content-card .card-headings h2, .content-card .card-headings .h2 {
@@ -12703,6 +12709,23 @@ img {
   font-weight: 400;
   line-height: 24px;
   color: #111111;
+  max-width: 261px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.content-card .card-headings button {
+  height: 34px;
+  width: 34px;
+}
+
+.content-card .card-headings button.gray {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.content-card .card-headings.card-headings-custom {
+  padding: 20px 24px 13px 24px;
 }
 
 .content-card.dark-card {
@@ -13365,7 +13388,7 @@ img {
 }
 
 .featured-section .featured-content .featured-img {
-  max-height: 406px;
+  max-height: 415px;
   width: 100%;
 }
 
@@ -13423,16 +13446,16 @@ img {
 }
 
 /*-- 2.5 Latest Post --*/
-.latest-post span {
+.latest-post .latest-post-img {
   width: 100%;
   overflow: hidden;
   max-height: 240px;
   height: 100%;
 }
 
-.latest-post span img {
+.latest-post .latest-post-img img {
   width: 100%;
-  max-height: 240px;
+  height: 100%;
 }
 
 .latest-post .latest-post-text button {
@@ -13498,15 +13521,19 @@ img {
 
 .latest-post-list ul li .latest-post-list-img {
   margin-right: 15px;
+  max-width: 110px;
+  width: 100%;
+  height: 90px;
 }
 
 .latest-post-list ul li .latest-post-list-img span {
-  max-width: 120px;
   width: 100%;
+  height: 100%;
 }
 
 .latest-post-list ul li .latest-post-list-img span img {
   width: 100%;
+  height: 100%;
 }
 
 .latest-post-list ul li .latest-post-list-text {
@@ -13744,6 +13771,343 @@ img {
   color: #FFFFFF;
 }
 
+/*-- 2.10 result table --*/
+.result-table .result-table-body .result-table-row:nth-last-child(1) {
+  border: none;
+}
+
+.result-table .result-table-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 18px 25px;
+  height: 69px;
+}
+
+.result-table .result-table-row li:nth-last-child(1) {
+  width: 20%;
+  text-align: right;
+  margin-left: auto;
+}
+
+.result-table .result-table-row li:nth-child(1) {
+  width: 20%;
+  text-align: left;
+  margin-right: auto;
+}
+
+.result-table .result-table-row li:nth-child(3) {
+  min-width: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.result-table .result-table-row li:nth-last-child(2) {
+  width: 20%;
+  text-align: right;
+  margin-left: auto;
+}
+
+.result-table .result-table-row li:nth-child(2) {
+  width: 20%;
+  text-align: left;
+  margin-right: auto;
+}
+
+.result-table .result-table-row li span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.result-table .result-table-row li span.gray {
+  color: #555555;
+}
+
+.result-table .result-table-row li span.red {
+  color: #EE2840;
+}
+
+.result-table .result-table-row li span.yellow {
+  color: #F3A228;
+}
+
+.result-table .result-table-row li .score {
+  width: 100%;
+  height: 34px;
+  padding: 6px 20px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 6px;
+}
+
+.result-table .result-table-row li .score span {
+  font-size: 16px;
+}
+
+.result-table .result-table-row li .score span.disable {
+  color: #999999;
+}
+
+/*-- 2.11 point table section --*/
+.point-table-section .point-table table {
+  width: 100%;
+}
+
+.point-table-section .point-table table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.point-table-section .point-table table tr th {
+  padding: 18px 0px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #111111;
+  width: 33%;
+}
+
+.point-table-section .point-table table tr th.sl-no {
+  color: #999999;
+  width: 10%;
+  padding-left: 25px;
+}
+
+.point-table-section .point-table table tr th:nth-last-child(2), .point-table-section .point-table table tr th:nth-last-child(3), .point-table-section .point-table table tr th:nth-last-child(4) {
+  color: #555555;
+  text-align: right;
+  width: 9%;
+}
+
+.point-table-section .point-table table tr th:nth-last-child(1) {
+  padding-right: 25px;
+  width: 14%;
+  text-align: right;
+}
+
+.point-table-section .point-table table tr td {
+  padding: 16.3px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #111111;
+  font-family: 'Inter';
+  width: 33%;
+}
+
+.point-table-section .point-table table tr td.sl-no {
+  color: #999999;
+  width: 10%;
+  padding-left: 25px;
+}
+
+.point-table-section .point-table table tr td:nth-last-child(2), .point-table-section .point-table table tr td:nth-last-child(3), .point-table-section .point-table table tr td:nth-last-child(4) {
+  color: #555555;
+  text-align: right;
+  width: 9%;
+}
+
+.point-table-section .point-table table tr td:nth-last-child(1) {
+  padding-right: 25px;
+  width: 14%;
+  text-align: right;
+}
+
+.point-table-section .point-table table tr td span {
+  overflow: hidden;
+  height: 18px;
+  width: 18px;
+  margin-right: 9px;
+}
+
+.point-table-section .point-table table tr td span img {
+  height: 18px;
+  width: 18px;
+  overflow: hidden;
+}
+
+/*-- 2.12 best player pool --*/
+.best-player-pool {
+  padding: 0px 24px 25px 24px;
+}
+
+.best-player-pool p {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #555555;
+  max-width: 316px;
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+.best-player-pool form ul {
+  width: 100%;
+}
+
+.best-player-pool form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.best-player-pool form ul li:nth-last-child(1) {
+  margin-bottom: 25px;
+}
+
+.best-player-pool form ul li h4, .best-player-pool form ul li .h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #555555;
+}
+
+.best-player-pool .best-player-pool-progress ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.best-player-pool .best-player-pool-progress ul li:nth-child(1) {
+  width: 42%;
+}
+
+.best-player-pool .best-player-pool-progress ul li:nth-child(2) {
+  width: 30%;
+}
+
+.best-player-pool .best-player-pool-progress ul li:nth-child(3) {
+  width: 16%;
+}
+
+.best-player-pool .best-player-pool-progress ul li:nth-child(4) {
+  width: 12%;
+}
+
+.best-player-pool .best-player-pool-progress ul li h6, .best-player-pool .best-player-pool-progress ul li .h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #555555;
+  margin-bottom: 5px;
+  font-family: 'Inter';
+}
+
+.best-player-pool .best-player-pool-progress ul li .progress-line {
+  height: 10px;
+  border-right: 1px solid #FFFFFF;
+  width: 100%;
+}
+
+.best-player-pool .best-player-pool-progress ul li .progress-line.progress-45 {
+  background: #EE2840;
+}
+
+.best-player-pool .best-player-pool-progress ul li .progress-line.progress-32 {
+  background: rgba(238, 40, 64, 0.7);
+}
+
+.best-player-pool .best-player-pool-progress ul li .progress-line.progress-16 {
+  background: rgba(238, 40, 64, 0.5);
+}
+
+.best-player-pool .best-player-pool-progress ul li .progress-line.progress-7 {
+  background: rgba(238, 40, 64, 0.3);
+  border-right: none;
+}
+
+/*-- radio custom --*/
+.radio-custom .radio-container {
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+}
+
+.radio-custom .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.radio-custom .radio-container input:checked ~ .checkmark {
+  background: #ffffff;
+  border: 2px solid #EE2840;
+}
+
+.radio-custom .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-custom .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-custom .radio-container .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #EE2840;
+}
+
+/*-- Footer Slider--*/
 .footer-slider-section {
   position: relative;
   display: -webkit-box;

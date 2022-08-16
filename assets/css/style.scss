@@ -19,6 +19,10 @@ CSS table of content
     2.6. Latest Post List
     2.7. time comment react section
     2.8. Tranding popular post Section
+    2.9. Top Player Section
+    2.10 result table
+    2.11 point table section
+    2.12 best player pool
 03. Footer Section
 
 -----------------*/
@@ -201,20 +205,35 @@ img {
     margin-bottom: 30px;
     & .card-headings {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         position: relative;
-        height: 70px;
-        padding: 12px 24px;
+        min-height: 70px;
+        padding: 18px 24px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        width: 100%;
         &:after{
             content: url(../images/icon/title-icon.svg);
             position: absolute;
             left: 0px;
             height: 20px;
+            top: 24px;
         }
         & h2 {
             @include text-style(24px, 400, 24px, #111111);
+            max-width: 261px;
+            width: 100%;
+            text-transform: uppercase;
+        }
+        & button{
+            height: 34px;
+            width: 34px;
+            &.gray{
+                filter: brightness(70%);
+            }
+        }
+        &.card-headings-custom{
+            padding: 20px 24px 13px 24px;
         }
     }
     &.dark-card {
@@ -685,7 +704,7 @@ img {
         position: relative;
         overflow: hidden;
         & .featured-img{
-            max-height: 406px;
+            max-height: 415px;
             width: 100%;
             & img{
                 width: 100%;
@@ -737,14 +756,14 @@ img {
 
 /*-- 2.5 Latest Post --*/
 .latest-post{
-    & span {
+    & .latest-post-img {
         width: 100%;
         overflow: hidden;
         max-height: 240px;
         height: 100%;
         & img {
             width: 100%;
-            max-height: 240px;
+            height: 100%;
         }
     }
     & .latest-post-text{
@@ -789,11 +808,15 @@ img {
             
             & .latest-post-list-img{
                 margin-right: 15px;
+                max-width: 110px;
+                width: 100%;
+                height: 90px;
                 & span{
-                    max-width: 120px;
                     width: 100%;
+                    height: 100%;
                     & img{
                         width: 100%;
+                        height: 100%;
                     }
                 }
             }
@@ -989,6 +1012,278 @@ img {
     }
 }
 
+/*-- 2.10 result table --*/
+.result-table{
+    & .result-table-body{
+        & .result-table-row{
+            &:nth-last-child(1){
+                border: none;
+            }
+        }
+    }
+    
+    & .result-table-row{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 25px;
+        height: 69px;
+        & li{
+            &:nth-last-child(1){
+                width: 20%; 
+                text-align: right;
+                margin-left: auto;
+            }
+            &:nth-child(1){
+                width: 20%; 
+                text-align: left;
+                margin-right: auto;
+            }
+            &:nth-child(3){
+                min-width: 100px;
+                margin: auto;
+                text-align: center;
+            }
+            &:nth-last-child(2){
+                width: 20%; 
+                text-align: right;
+                margin-left: auto;
+            }
+            &:nth-child(2){
+                width: 20%; 
+                text-align: left;
+                margin-right: auto;
+            }
+            & span{
+                @include text-style(14px, 400, 20px, #111111);
+                text-transform: uppercase;
+                &.gray{
+                    color: #555555;
+                }
+                &.red{
+                    color: #EE2840;
+                }
+                &.yellow{
+                    color: #F3A228;
+                }
+            }
+            & .score{
+                width: 100%;
+                height: 34px;
+                padding: 6px 20px;
+                border: 1px solid rgba(17, 17, 17, 0.12);
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 6px;
+                & span{
+                    font-size: 16px;
+                    &.disable{
+                        color: #999999;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/*-- 2.11 point table section --*/
+.point-table-section{
+    .point-table{
+        & table{
+            width: 100%;
+            & tr{
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                & th{
+                    padding: 18px 0px;
+                    @include text-style(14px, 400, 120%, #111111);
+                    width: 33%;
+                    &.sl-no{
+                        color: #999999;
+                        width: 10%;
+                        padding-left: 25px;
+                    }
+                    &:nth-last-child(2),
+                    &:nth-last-child(3),
+                    &:nth-last-child(4){
+                        color: #555555;
+                        text-align: right;
+                        width: 9%;
+                    }
+                    &:nth-last-child(1){
+                        padding-right: 25px;
+                        width: 14%;
+                        text-align: right;
+                    }
+                }
+                & td{
+                    padding: 16.3px 0px;
+                    @include text-style(14px, 500, 20px, #111111);
+                    font-family: 'Inter';
+                    width: 33%;
+                    &.sl-no{
+                        color: #999999;
+                        width: 10%;
+                        padding-left: 25px;
+                    }
+                    &:nth-last-child(2),
+                    &:nth-last-child(3),
+                    &:nth-last-child(4){
+                        color: #555555;
+                        text-align: right;
+                        width: 9%;
+                    }
+                    &:nth-last-child(1){
+                        padding-right: 25px;
+                        width: 14%;
+                        text-align: right;
+                    }
+                    & span{
+                        overflow: hidden;
+                        height: 18px;
+                        width: 18px;
+                        margin-right: 9px;
+                        & img{
+                            height: 18px;
+                            width: 18px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- 2.12 best player pool --*/
+.best-player-pool{
+    padding: 0px 24px 25px 24px;
+    & p{
+        font-family: 'Inter';
+        @include text-style(14px, 500, 25px, #555555);
+        max-width: 316px;
+        width: 100%;
+        margin-bottom: 21px;
+    }
+    & form{
+        & ul{
+            width: 100%;
+            & li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 30px;
+                &:nth-last-child(1){
+                    margin-bottom: 25px;
+                }
+                & h4{
+                    @include text-style(14px, 400, 20px, #555555);
+                }
+            }
+        }
+    }
+    & .best-player-pool-progress{
+        & ul{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            & li{
+                &:nth-child(1){
+                    width: 42%;
+                }
+                &:nth-child(2){
+                    width: 30%;
+                }
+                &:nth-child(3){
+                    width: 16%;
+                }
+                &:nth-child(4){
+                    width: 12%;
+                }
+                & h6{
+                    @include text-style(14px, 500, 25px, #555555);
+                    margin-bottom: 5px;
+                    font-family: 'Inter';
+                }
+                & .progress-line{
+                    height: 10px;
+                    border-right: 1px solid #FFFFFF;
+                    width: 100%;
+                    &.progress-45{
+                        background: #EE2840;
+                    }
+                    &.progress-32{
+                        background: rgba(238, 40, 64, 0.7);
+                    }
+                    &.progress-16{
+                        background: rgba(238, 40, 64, 0.5);
+                    }
+                    &.progress-7{
+                        background: rgba(238, 40, 64, 0.3);
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- radio custom --*/
+.radio-custom {
+    .radio-container {
+        display: block;
+        position: relative;
+        padding-left: 27px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include text-style(14px, 400, 20px, #111111);
+    }
+    
+    .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.15);
+    }
+    .radio-container input:checked ~ .checkmark {
+        background: #ffffff;
+        border: 2px solid #EE2840;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    .radio-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+    .radio-container .checkmark:after {
+        top: 2px;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #EE2840;
+    }
+}
+
+/*-- Footer Slider--*/
 .footer-slider-section{
     position: relative;
     display: flex;
