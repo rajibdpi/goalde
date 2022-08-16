@@ -12689,6 +12689,7 @@ img {
   height: 70px;
   padding: 12px 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  width: 100%;
 }
 
 .content-card .card-headings:after {
@@ -12703,6 +12704,18 @@ img {
   font-weight: 400;
   line-height: 24px;
   color: #111111;
+  max-width: 261px;
+  width: 100%;
+}
+
+.content-card .card-headings button {
+  height: 34px;
+  width: 34px;
+}
+
+.content-card .card-headings button.gray {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 .content-card.dark-card {
