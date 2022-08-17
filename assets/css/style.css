@@ -22,6 +22,8 @@ CSS table of content
     2.10 result table
     2.11 point table section
     2.12 best player pool
+    2.13 Transfer News Summer Card
+    2.14 newsletter-section
 03. Footer Section
 
 -----------------*/
@@ -13390,12 +13392,40 @@ img {
 .featured-section .featured-content .featured-img {
   max-height: 415px;
   width: 100%;
+  position: relative;
 }
 
 .featured-section .featured-content .featured-img img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.featured-section .featured-content .featured-img .play-btn {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  right: 25px;
+  bottom: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.featured-section .featured-content .featured-img .play-btn img {
+  height: 22px;
+  width: 14px;
 }
 
 .featured-section .featured-content .featured-text {
@@ -13524,16 +13554,47 @@ img {
   max-width: 110px;
   width: 100%;
   height: 90px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
 }
 
-.latest-post-list ul li .latest-post-list-img span {
+.latest-post-list ul li .latest-post-list-img img {
   width: 100%;
   height: 100%;
 }
 
-.latest-post-list ul li .latest-post-list-img span img {
-  width: 100%;
-  height: 100%;
+.latest-post-list ul li .latest-post-list-img .play-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.latest-post-list ul li .latest-post-list-img .play-btn img {
+  height: 14.5px;
+  width: 10px;
 }
 
 .latest-post-list ul li .latest-post-list-text {
@@ -13628,10 +13689,40 @@ img {
 
 .tranding-content .tranding-content-card .tranding-img {
   width: 100%;
+  height: 216px;
+  position: relative;
 }
 
 .tranding-content .tranding-content-card .tranding-img img {
   width: 100%;
+  height: 100%;
+}
+
+.tranding-content .tranding-content-card .tranding-img .play-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 15px;
+  bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tranding-content .tranding-content-card .tranding-img .play-btn img {
+  height: 14.5px;
+  width: 10px;
 }
 
 .tranding-content .tranding-content-card .tranding-text {
@@ -14049,6 +14140,312 @@ img {
   border-right: none;
 }
 
+/*-- 2.13 Transfer News Summer Card --*/
+.transfer-news-summer-card {
+  background: #18307E;
+  padding: 22px 0px 25px 0px;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.transfer-news-summer-card .transfer-news-arrow-shapes .arrow-shap1 {
+  position: absolute;
+  left: 25px;
+  top: 87px;
+}
+
+.transfer-news-summer-card .transfer-news-arrow-shapes .arrow-shap2 {
+  position: absolute;
+  right: 25px;
+  top: 150px;
+}
+
+.transfer-news-summer-card .transfer-news-arrow-shapes .arrow-shap3 {
+  position: absolute;
+  left: 82px;
+  top: 285px;
+}
+
+.transfer-news-summer-card .transfer-news-arrow-shapes .angle-shape1 {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transform: rotate(37.65deg);
+          transform: rotate(37.65deg);
+  position: absolute;
+  left: 95px;
+  top: -55px;
+  width: 30px;
+  height: 407px;
+}
+
+.transfer-news-summer-card .transfer-news-arrow-shapes .angle-shape2 {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transform: rotate(37.65deg);
+          transform: rotate(37.65deg);
+  position: absolute;
+  left: 125px;
+  top: -65px;
+  width: 36px;
+  height: 515px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner {
+  width: 100%;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner h3, .transfer-news-summer-card .transfer-news-summer-card-inner .h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 190px;
+  margin: auto;
+  margin-bottom: 31px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 0px 25px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .summer-img-overlay {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22.92%, rgba(24, 48, 126, 0)), color-stop(87.5%, #18307E));
+  background: linear-gradient(180deg, rgba(24, 48, 126, 0) 22.92%, #18307E 87.5%);
+  height: 305px;
+  width: 100%;
+  position: absolute;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .transfer-news-summer-text {
+  position: absolute;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .transfer-news-summer-text h4, .transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .transfer-news-summer-text .h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .transfer-news-summer-text p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Inter';
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-logo {
+  padding: 0px 25px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-logo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 55px;
+  position: relative;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-logo ul:after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(49.48%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.48%, rgba(255, 255, 255, 0) 100%);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-logo ul:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(49.48%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.48%, rgba(255, 255, 255, 0) 100%);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 25px 5px 25px;
+  position: relative;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section:after {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(48.96%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 48.96%, rgba(255, 255, 255, 0) 100%);
+  height: 50px;
+  width: 4px;
+  position: absolute;
+  left: 49.5%;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section .market-value-contract-end-content {
+  width: 50%;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section .market-value-contract-end-content:nth-last-child(1) {
+  text-align: right;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section .market-value-contract-end-content span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section .market-value-contract-end-content h5, .transfer-news-summer-card .transfer-news-summer-card-inner .market-value-contract-end-section .market-value-contract-end-content .h5 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots {
+  max-width: 90px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot {
+  height: 10px;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot.active, .transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/*-- 2.14 newsletter-section --*/
+.newsletter-section {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.newsletter-section .newsletter-top-lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newsletter-section .newsletter-top-lines .newsletter-line {
+  background: rgba(238, 40, 64, 0.6);
+  height: 20px;
+  width: 33.33333333333333%;
+}
+
+.newsletter-section .newsletter-top-lines .newsletter-line:nth-child(1), .newsletter-section .newsletter-top-lines .newsletter-line:nth-last-child(1) {
+  background: rgba(238, 40, 64, 0.3);
+}
+
+.newsletter-section .newsletter-content {
+  text-align: center;
+  padding: 35px 25px 25px 25px;
+}
+
+.newsletter-section .newsletter-content h4, .newsletter-section .newsletter-content .h4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #14151B;
+  max-width: 217px;
+  width: 100%;
+  margin: auto;
+  margin-top: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.newsletter-section .newsletter-content form input {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #555555;
+  font-family: 'Inter';
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.newsletter-section .newsletter-content form button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background: #EE2840;
+}
+
+.newsletter-section .newsletter-content p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #555555;
+}
+
 /*-- radio custom --*/
 .radio-custom .radio-container {
   display: block;
@@ -14124,13 +14521,10 @@ img {
 .footer-slider-section .footer-slider-img {
   max-width: 20%;
   width: 100%;
-}
-
-.footer-slider-section .footer-slider-img span {
   overflow: hidden;
 }
 
-.footer-slider-section .footer-slider-img span img {
+.footer-slider-section .footer-slider-img img {
   height: 100%;
   width: 100%;
   overflow: hidden;

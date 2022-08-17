@@ -23,6 +23,8 @@ CSS table of content
     2.10 result table
     2.11 point table section
     2.12 best player pool
+    2.13 Transfer News Summer Card
+    2.14 newsletter-section
 03. Footer Section
 
 -----------------*/
@@ -706,10 +708,29 @@ img {
         & .featured-img{
             max-height: 415px;
             width: 100%;
+            position: relative;
             & img{
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
+            }
+            & .play-btn{
+                position: absolute;
+                height: 60px;
+                width: 60px;
+                right: 25px;
+                bottom: 25px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(10px);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & img{
+                    height: 22px;
+                    width: 14px;
+                }
             }
         }
         .featured-text{
@@ -811,14 +832,33 @@ img {
                 max-width: 110px;
                 width: 100%;
                 height: 90px;
-                & span{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                & img {
                     width: 100%;
                     height: 100%;
-                    & img{
-                        width: 100%;
-                        height: 100%;
+                }
+                & .play-btn {
+                    position: absolute;
+                    height: 40px;
+                    width: 40px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                    backdrop-filter: blur(10px);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    & img {
+                        height: 14.5px;
+                        width: 10px;
                     }
                 }
+                
             }
             & .latest-post-list-text{
                 max-width: 210px;
@@ -899,9 +939,31 @@ img {
 
         & .tranding-img {
             width: 100%;
+            height: 216px;
+            position: relative;
 
             & img {
                 width: 100%;
+                height: 100%;
+            }
+            & .play-btn {
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                right: 15px;
+                bottom: 15px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(10px);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & img {
+                    height: 14.5px;
+                    width: 10px;
+                }
             }
         }
 
@@ -1231,6 +1293,227 @@ img {
     }
 }
 
+/*-- 2.13 Transfer News Summer Card --*/
+.transfer-news-summer-card{
+    background: #18307E;
+    padding: 22px 0px 25px 0px;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    & .transfer-news-arrow-shapes{
+        & .arrow-shap1{
+            position: absolute;
+            left: 25px;
+            top: 87px;
+            
+        }
+        & .arrow-shap2{
+            position: absolute;
+            right: 25px;
+            top: 150px;
+        }
+        & .arrow-shap3{
+            position: absolute;
+            left: 82px;
+            top: 285px;
+        }
+        & .angle-shape1{
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(37.65deg);
+            position: absolute;
+            left: 95px;
+            top: -55px;
+            width: 30px;
+            height: 407px;
+        }
+        & .angle-shape2{
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(37.65deg);
+            position: absolute;
+            left: 125px;
+            top: -65px;
+            width: 36px;
+            height: 515px;
+        }
+    }
+    .transfer-news-summer-card-inner{
+        width: 100%;
+        & h3{
+            @include text-style(24px, 400, 30px, #FFFFFF);
+            text-align: center;
+            text-transform: uppercase;
+            max-width: 190px;
+            margin: auto;
+            margin-bottom: 31px;
+        }
+        .transfer-news-summer-img{
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 0px 25px;
+            & .summer-img-overlay{
+                background: linear-gradient(180deg, rgba(24, 48, 126, 0) 22.92%, #18307E 87.5%);
+                height: 305px;
+                width: 100%;
+                position: absolute;
+            }
+            .transfer-news-summer-text {
+                position: absolute;
+
+                & h4 {
+                    @include text-style(18px, 400, 24px, #FFFFFF);
+                    text-transform: uppercase;
+                }
+                & p {
+                    @include text-style(14px, 500, 24px, rgba(255, 255, 255, 0.8));
+                    font-family: 'Inter';
+                }
+            }
+        }
+        .transfer-news-summer-logo{
+            padding: 0px 25px;
+            & ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 55px;
+                position: relative;
+                &:after{
+                    content: '';
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.48%, rgba(255, 255, 255, 0) 100%);
+                    height: 4px;
+                    width: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+                &:before{
+                    content: '';
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.48%, rgba(255, 255, 255, 0) 100%);
+                    height: 4px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                }
+                li{
+                    
+                }
+            }
+        }
+        .market-value-contract-end-section{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 10px 25px 5px 25px;
+            position: relative;
+            &:after {
+                content: '';
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 48.96%, rgba(255, 255, 255, 0) 100%);
+                height: 50px;
+                width: 4px;
+                position: absolute;
+                left: 49.5%;
+            }
+            & .market-value-contract-end-content{
+                width: 50%;
+                &:nth-last-child(1){
+                    text-align: right;
+                }
+                & span{
+                    @include text-style(14px, 400, 30px, rgba(255, 255, 255, 0.8));
+                }
+                & h5{
+                    @include text-style(24px, 400, 30px, #FFFFFF);
+                }
+            }
+        }
+        & .transfer-news-summer-dots{
+            max-width: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 15px;
+            & .dot{
+                height: 10px;
+                width: 10px;
+                background: rgba(255, 255, 255, 0.12);
+                border-radius: 50%;
+                &.active, 
+                &:hover{
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+}
+
+/*-- 2.14 newsletter-section --*/
+.newsletter-section{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    margin-bottom: 30px;
+    & .newsletter-top-lines{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .newsletter-line{
+            background: rgba(238, 40, 64, 0.6);
+            height: 20px;
+            width: 33.33333333333333%;
+            &:nth-child(1),
+            &:nth-last-child(1){
+                background: rgba(238, 40, 64, 0.3);
+            }
+        }
+    }
+    
+    & .newsletter-content{
+        text-align: center;
+        padding: 35px 25px 25px 25px;
+        & h4{
+            @include text-style(24px, 400, 30px, #14151B);
+            max-width: 217px;
+            width: 100%;
+            margin: auto;
+            margin-top: 18px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        & form{
+            & input{
+                @include text-style(14px, 500, 20px, #555555);
+                font-family: 'Inter';
+                width: 100%;
+                height: 50px;
+                border: 1px solid rgba(0, 0, 0, 0.12);
+                padding: 10px 15px;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+            & button{
+                @include text-style(14px, 400, 120%, #FFFFFF);
+                text-transform: uppercase;
+                width: 100%;
+                height: 50px;
+                margin-bottom: 20px;
+                background: #EE2840;
+            }
+        }
+        & p{
+            @include text-style(13px, 500, 20px, #555555);
+        }
+    }
+}
+
 /*-- radio custom --*/
 .radio-custom {
     .radio-container {
@@ -1292,13 +1575,11 @@ img {
     & .footer-slider-img{
         max-width: 20%;
         width: 100%;
-        & span{
+        overflow: hidden;
+        & img {
+            height: 100%;
+            width: 100%;
             overflow: hidden;
-            & img{
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
-            }
         }
     }
     & .footer-slider-overlay1{
