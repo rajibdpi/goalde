@@ -1691,6 +1691,149 @@ img {
     background-repeat: no-repeat;
     padding: 50px 0px 20px 0px;
 }
+.index2-upcomming-match-section{
+    background: url(../images/bg/index-2upcoming-match-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 160px;
+    .slideshow-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        & .upcoming-slide-prev{
+            position: absolute;
+            left: 0px;
+        }
+        & .upcoming-slide-next{
+            position: absolute;
+            right: 0px;
+        }
+    }
+    .index2-upcomming-content{
+        position: relative;
+        .index2-upcomming-left{
+            padding: 0px 25px;
+            min-height: 155px;
+            width: 98.5%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            & .index2-upcomming-left-team{
+                display: flex;
+                & .upcoming-team-logo{
+                    margin: 17px 24px 0px 24px;
+                    & img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+            & .index2-upcomming-left-team{
+                & .index2-upcomming-left-img {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.65%, #FFFFFF 100%);
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        border: 0px;
+                        left: 0px;
+                    }
+                }
+            }
+            & .index2-upcomming-left-schedule{
+                max-width: 268px;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                &:after {
+                    content: url(../images/bg/upcoming-bg-shapes.svg);
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    z-index: 0;
+                }
+                & .index2-upcomming-left-schedule-inner{
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                    padding-bottom: 14px;
+                    padding-top: 20px;
+                    & h4{
+                        @include text-style(14px, 400, 20px, #EE2840);
+                    }
+                    & .index2-upcomming-vs{
+                        max-width: 240px;
+                        padding: 5px 28px;
+                        width: 100%;
+                        background: #FFFFFF;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 16px auto;
+                        & h5{
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+        .match-prediction-section{
+            padding: 21px 25px 25px 25px;
+            & h3{
+                @include text-style(18px, 400, 120%, #FFFFFF);
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            & .match-prediction-list{
+                & li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    margin-bottom: 16px;
+                    &:nth-last-child(1){
+                        margin-bottom: 0px;
+                    }
+                    & span{
+                        font-family: 'Inter';
+                        @include text-style(14px, 500, 14px, #FFFFFF);
+                        text-transform: uppercase;
+                    }
+                    & .match-prediction-progress{
+                        height: 10px;
+                        background: rgba(255, 255, 255, 0.5);
+                        margin-right: 14px;
+                        &.progress-krc{
+                            max-width: 200px;
+                            width: 100%;
+                        }
+                        &.progress-bfc{
+                            max-width: 30px;
+                            width: 100%;
+                        }
+                        &.progress-draw{
+                            max-width: 67px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 /*-- Index ii Banner Section End --*/
 
@@ -1705,6 +1848,55 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    & .breadcumbs-left{
+        & .breadcumbs-menu{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            & a{
+                @include text-style(14px, 400, 14px, #FFFFFF);
+                text-transform: uppercase;
+                position: relative;
+                &:nth-last-child(1){
+                    opacity: 70%;
+                }
+            }
+        }
+        & h2{
+            @include text-style(30px, 400, 100%, #FFFFFF);
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    }
+    .breadcumbs-right{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        & ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            & li{
+                margin-left: 24px;
+                &:nth-child(1){
+                    margin-left: 0px;
+                }
+                & button{
+                    @include text-style(14px, 400, 20px, rgba(255, 255, 255, 0.7));
+                    padding: 11px 13px;
+                    text-transform: uppercase;
+                    &.active,
+                    &:hover{
+                        background: rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(5px);
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
 }
 /*-- 04. Breadcumbs section End --*/
 

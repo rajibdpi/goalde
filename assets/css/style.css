@@ -14665,6 +14665,196 @@ img {
   padding: 50px 0px 20px 0px;
 }
 
+.index2-upcomming-match-section {
+  background: url(../images/bg/index-2upcoming-match-bg.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 160px;
+}
+
+.index2-upcomming-match-section .slideshow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.index2-upcomming-match-section .slideshow-container .upcoming-slide-prev {
+  position: absolute;
+  left: 0px;
+}
+
+.index2-upcomming-match-section .slideshow-container .upcoming-slide-next {
+  position: absolute;
+  right: 0px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content {
+  position: relative;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left {
+  padding: 0px 25px;
+  min-height: 155px;
+  width: 98.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-team .upcoming-team-logo {
+  margin: 17px 24px 0px 24px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-team .upcoming-team-logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-team .index2-upcomming-left-img {
+  position: relative;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-team .index2-upcomming-left-img:after {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(53.65%, rgba(255, 255, 255, 0)), to(#FFFFFF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.65%, #FFFFFF 100%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  left: 0px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule {
+  max-width: 268px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule:after {
+  content: url(../images/bg/upcoming-bg-shapes.svg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule .index2-upcomming-left-schedule-inner {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 14px;
+  padding-top: 20px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule .index2-upcomming-left-schedule-inner h4, .index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule .index2-upcomming-left-schedule-inner .h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #EE2840;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .index2-upcomming-left .index2-upcomming-left-schedule .index2-upcomming-left-schedule-inner .index2-upcomming-vs {
+  max-width: 240px;
+  padding: 5px 28px;
+  width: 100%;
+  background: #FFFFFF;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 16px auto;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section {
+  padding: 21px 25px 25px 25px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section h3, .index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li span {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li .match-prediction-progress {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-right: 14px;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li .match-prediction-progress.progress-krc {
+  max-width: 200px;
+  width: 100%;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li .match-prediction-progress.progress-bfc {
+  max-width: 30px;
+  width: 100%;
+}
+
+.index2-upcomming-match-section .index2-upcomming-content .match-prediction-section .match-prediction-list li .match-prediction-progress.progress-draw {
+  max-width: 67px;
+  width: 100%;
+}
+
 /*-- Index ii Banner Section End --*/
 /*-- 04. Breadcumbs section Start --*/
 .breadcumbs-section {
@@ -14682,6 +14872,90 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.breadcumbs-section .breadcumbs-left .breadcumbs-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.breadcumbs-section .breadcumbs-left .breadcumbs-menu a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.breadcumbs-section .breadcumbs-left .breadcumbs-menu a:nth-last-child(1) {
+  opacity: 70%;
+}
+
+.breadcumbs-section .breadcumbs-left h2, .breadcumbs-section .breadcumbs-left .h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #FFFFFF;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.breadcumbs-section .breadcumbs-right {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.breadcumbs-section .breadcumbs-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.breadcumbs-section .breadcumbs-right ul li {
+  margin-left: 24px;
+}
+
+.breadcumbs-section .breadcumbs-right ul li:nth-child(1) {
+  margin-left: 0px;
+}
+
+.breadcumbs-section .breadcumbs-right ul li button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 11px 13px;
+  text-transform: uppercase;
+}
+
+.breadcumbs-section .breadcumbs-right ul li button.active, .breadcumbs-section .breadcumbs-right ul li button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #FFFFFF;
 }
 
 /*-- 04. Breadcumbs section End --*/
