@@ -14560,6 +14560,7 @@ img {
 }
 
 /*-- Index i End --*/
+/*-- 03. Index ii Banner Section Start --*/
 .index2-banner-slider-section .slideshow-container {
   width: 100%;
   position: relative;
@@ -14656,7 +14657,6 @@ img {
   width: 20px;
 }
 
-/*-- 03. Index ii Banner Section Start --*/
 .index2-banner-bg {
   background: url(../images/bg/index2-banner-bg.jpg);
   background-size: cover;
@@ -14959,6 +14959,196 @@ img {
 }
 
 /*-- 04. Breadcumbs section End --*/
+/*-- Live Score Section Start --*/
+.live-score-section .live-score-inner {
+  padding: 70px 0px;
+}
+
+.live-score-section .live-score-inner .live-score-board {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  padding: 0px 25px;
+  min-height: 140px;
+  overflow: hidden;
+}
+
+.live-score-section .live-score-inner .live-score-board:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 55px;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-player-img {
+  margin-top: 20px;
+  position: relative;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-player-img:after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(53.65%, rgba(255, 255, 255, 0)), to(#FFFFFF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.65%, #FFFFFF 100%);
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img {
+  position: relative;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img h6, .live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img .h6 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  bottom: -30px;
+  left: 0px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #555555;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img h6.right-align, .live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img .right-align.h6 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  right: 0px;
+  left: auto;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img h6 span img, .live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img .h6 span img {
+  height: 14px;
+  width: 14px;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-board-player .live-score-board-team-img img {
+  height: 50px;
+  width: 50px;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 302px;
+  width: 100%;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content h4, .live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 100px;
+  padding: 12px 32px;
+  height: 50px;
+  max-width: 170px;
+  width: 100%;
+  margin: 0px 29px;
+  position: relative;
+  z-index: 1;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score h5, .live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score .h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score span.red {
+  color: #EE2840;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score span.gray {
+  color: #999999;
+}
+
+.live-score-section .live-score-inner .live-score-board .live-score-board-content .live-score-content .live-score-section-bg {
+  position: absolute;
+  z-index: 0;
+}
+
+/*-- Live Score Section End --*/
+/*-- Club Overview sub Banner Section Start --*/
+.club_overview-sub-banner-section {
+  background: url(../images/banner/sub-banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 370px;
+  width: 100%;
+}
+
+/*-- Club Overview sub Banner Section End --*/
 /*-- radio custom --*/
 .radio-custom .radio-container {
   display: block;
