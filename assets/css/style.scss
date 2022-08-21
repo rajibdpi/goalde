@@ -236,6 +236,30 @@ img {
                 filter: brightness(70%);
             }
         }
+        
+        & .card-headings-slider-btns{
+            height: 34px;
+            width: 80px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 16px;
+            gap: 35px;
+            &:after{
+                content: '';
+                width: 2px;
+                height: 16px;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.12);
+            }
+            & a {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
         &.card-headings-custom{
             padding: 20px 24px 13px 24px;
         }
@@ -246,6 +270,13 @@ img {
         & .card-headings {
             & h2 {
                color: #FFFFFF;
+            }
+            & .card-headings-slider-btns {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+
+                &:after {
+                    background: rgba(255, 255, 255, 0.12);
+                }
             }
         }
     }
@@ -805,9 +836,19 @@ img {
         position: relative;
         overflow: hidden;
         & .featured-img{
-            max-height: 415px;
+            height: 415px;
             width: 100%;
             position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0px;
+                top: 0px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.85%, rgba(0, 0, 0, 0.8) 100%);
+                z-index: 0;
+            }
             & img{
                 width: 100%;
                 height: 100%;
@@ -826,6 +867,7 @@ img {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                z-index: 2;
                 & img{
                     height: 22px;
                     width: 14px;
@@ -836,10 +878,10 @@ img {
             position: absolute;
             bottom: 22px;
             left: 24px;
+            z-index: 1;
             & button {
                 background: #EE2840;
                 border-radius: 100px;
-                width: 80px;
                 height: 25px;
                 padding: 5px 15px;
                 line-height: 14px;
@@ -2038,6 +2080,110 @@ img {
     background-repeat: no-repeat;
     min-height: 370px;
     width: 100%;
+    padding-top: 80px;
+    margin-bottom: 961px;
+    
+    .club_overview-sub-banner-content{
+        & .sub-banner-breadcumbs{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 21px;
+            & a{
+                @include text-style(14px, 400, 14px, #FFFFFF);
+                text-transform: uppercase;
+                &:nth-last-child(1){
+                    opacity: 70%;
+                }
+            }
+        }
+        & .club-overview-content{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+            & .club-overview-img{
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(5px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 170px;
+                width: 170px;
+                & img{
+                    height: 100px;
+                    width: 100%;
+                }
+            }
+            
+            & .club-overview-text{
+                padding-top: 5px;
+                margin-left: 29px;
+                & h2{
+                    @include text-style(30px, 400, 100%, #FFFFFF);
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+                & .club-overview-text-inner{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    & .club-overview-text-column{
+                        width: 24.5%;
+                        margin-right: 25px;
+                        margin-bottom: 14px;
+                        &:nth-last-child(1){
+                            margin-right: 0px;
+                        }
+                        & h6{
+                            @include text-style(14px, 400, 24px, rgba(255, 255, 255, 0.7));
+                            text-transform: uppercase;
+                        }
+                        & p{
+                            @include text-style(14px, 500, 24px, #FFFFFF);
+                        }
+                        & ul{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            & li{
+                                height: 16px;
+                                width: 16px;
+                                margin-right: 18px;
+                                &:nth-last-child(1){
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .club-overview-btns{
+            & ul{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                gap: 5px;
+                & li{
+                    & button{
+                        @include text-style(14px, 400, 20px, #FFFFFF);
+                        background: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(5px);
+                        width: 110px;
+                        height: 40px;
+                        text-transform: uppercase;
+                        &.active, 
+                        &:hover{
+                            color: #111111;
+                            background: #F3F3F3;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

@@ -12728,6 +12728,41 @@ img {
           filter: brightness(70%);
 }
 
+.content-card .card-headings .card-headings-slider-btns {
+  height: 34px;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 9px 16px;
+  gap: 35px;
+}
+
+.content-card .card-headings .card-headings-slider-btns:after {
+  content: '';
+  width: 2px;
+  height: 16px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.content-card .card-headings .card-headings-slider-btns a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .content-card .card-headings.card-headings-custom {
   padding: 20px 24px 13px 24px;
 }
@@ -12740,6 +12775,14 @@ img {
 
 .content-card.dark-card .card-headings h2, .content-card.dark-card .card-headings .h2 {
   color: #FFFFFF;
+}
+
+.content-card.dark-card .card-headings .card-headings-slider-btns {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.content-card.dark-card .card-headings .card-headings-slider-btns:after {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /*-- social share btns --*/
@@ -13503,9 +13546,21 @@ img {
 }
 
 .featured-section .featured-content .featured-img {
-  max-height: 415px;
+  height: 415px;
   width: 100%;
   position: relative;
+}
+
+.featured-section .featured-content .featured-img:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33.85%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.85%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
 }
 
 .featured-section .featured-content .featured-img img {
@@ -13534,6 +13589,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 .featured-section .featured-content .featured-img .play-btn img {
@@ -13545,12 +13601,12 @@ img {
   position: absolute;
   bottom: 22px;
   left: 24px;
+  z-index: 1;
 }
 
 .featured-section .featured-content .featured-text button {
   background: #EE2840;
   border-radius: 100px;
-  width: 80px;
   height: 25px;
   padding: 5px 15px;
   line-height: 14px;
@@ -15146,6 +15202,174 @@ img {
   background-repeat: no-repeat;
   min-height: 370px;
   width: 100%;
+  padding-top: 80px;
+  margin-bottom: 961px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .sub-banner-breadcumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 21px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .sub-banner-breadcumbs a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .sub-banner-breadcumbs a:nth-last-child(1) {
+  opacity: 70%;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-img {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 170px;
+  width: 170px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-img img {
+  height: 100px;
+  width: 100%;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text {
+  padding-top: 5px;
+  margin-left: 29px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text h2, .club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column {
+  width: 24.5%;
+  margin-right: 25px;
+  margin-bottom: 14px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column h6, .club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column .h6 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column ul li {
+  height: 16px;
+  width: 16px;
+  margin-right: 18px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-content .club-overview-text .club-overview-text-inner .club-overview-text-column ul li:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-btns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 5px;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-btns ul li button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 110px;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+.club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-btns ul li button.active, .club_overview-sub-banner-section .club_overview-sub-banner-content .club-overview-btns ul li button:hover {
+  color: #111111;
+  background: #F3F3F3;
 }
 
 /*-- Club Overview sub Banner Section End --*/
