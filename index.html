@@ -9,6 +9,9 @@
     <!-- slick Slider -->
     <link rel="stylesheet" href="assets/css/slick-theme.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <!-- Bootstrap CSS v5.2.0 -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -76,7 +79,7 @@
     <div class="banner-slider-section">
         <div class="slideshow-container">
 
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img src="assets/images/banner/banner1.jpg" class="w-100">
                 <div class="text">
                     <button>Fifo 22</button>
@@ -84,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img src="assets/images/banner/banner2.jpg" class="w-100">
                 <div class="text">
                     <button>Fifo 22</button>
@@ -92,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img src="assets/images/banner/banner3.jpg" class="w-100">
                 <div class="text">
                     <button>Fifo 22</button>
@@ -100,7 +103,7 @@
                 </div>
             </div>
             
-            <div class="mySlides fade">
+            <div class="bannerSlider fade">
                 <img src="assets/images/banner/banner4.jpg" class="w-100">
                 <div class="text">
                     <button>Fifo 22</button>
@@ -128,114 +131,120 @@
     <!-- match schedule section Start-->
     <div class="upcoming-match-section">
         <div class="container">
-            <div class="upcoming-match-slider row">
-                <div class="col-md-12">
-                    <div class="upcoming-match-slider-content">
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo1">
-                            <span><img src="assets/images/club/club-img.svg" alt="img" class="img-fluid" /></span>
-                        </div>
-
-                        <div class="upcoming-match-middle-content">
-                            <div class="upcoming-match-count-down">
-                                <ul class="timer timer_1">
-                                    <li class="days">3<span>D</span></li>
-                                    <li class="hours">01<span>H</span></li>
-                                    <li class="minutes">13<span>M</span></li>
-                                    <li class="seconds">56<span>S</span></li>
-                                </ul>
+            <div class="upcoming-match-section-inner">
+                <div class="upcoming-match-slider owl-carousel owl-theme owl-loaded row">
+                    <div class="col-md-12">
+                        <div class="upcoming-match-slider-content">
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo1">
+                                <span><img src="assets/images/club/club-img.svg" alt="img" class="img-fluid" /></span>
                             </div>
-                            <div class="match-vs">
-                                <div class="match-vs-text">
-                                    <h4>BFC</h4>
-                                    <div class="vs">
-                                        <span>vs</span>
+
+                            <div class="upcoming-match-middle-content">
+                                <div class="upcoming-match-count-down">
+                                    <ul class="timer timer_1">
+                                        <li class="days">3<span>D</span></li>
+                                        <li class="hours">01<span>H</span></li>
+                                        <li class="minutes">13<span>M</span></li>
+                                        <li class="seconds">56<span>S</span></li>
+                                    </ul>
+                                </div>
+                                <div class="match-vs">
+                                    <div class="match-vs-text">
+                                        <h4>BFC</h4>
+                                        <div class="vs">
+                                            <span>vs</span>
+                                        </div>
+                                        <h4>KRC</h4>
                                     </div>
-                                    <h4>KRC</h4>
+                                </div>
+                                <div class="next-match-info">
+                                    <h5>Next Match</h5>
+                                    <h6>Friday, Jun 19 - 08:30PM EST</h6>
+                                    <p>Allianz Arena</p>
                                 </div>
                             </div>
-                            <div class="next-match-info">
-                                <h5>Next Match</h5>
-                                <h6>Friday, Jun 19 - 08:30PM EST</h6>
-                                <p>Allianz Arena</p>
+
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo2">
+                                <span><img src="assets/images/club/club-img-2.svg" alt="img" class="img-fluid" /></span>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="upcoming-match-slider-content">
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo1">
+                                <span><img src="assets/images/club/club-img-4.svg" alt="img" class="img-fluid" /></span>
+                            </div>
 
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo2">
-                            <span><img src="assets/images/club/club-img-2.svg" alt="img" class="img-fluid" /></span>
+                            <div class="upcoming-match-middle-content">
+                                <div class="upcoming-match-count-down">
+                                    <ul class="timer timer_2">
+                                        <li class="days">3<span>D</span></li>
+                                        <li class="hours">01<span>H</span></li>
+                                        <li class="minutes">13<span>M</span></li>
+                                        <li class="seconds">56<span>S</span></li>
+                                    </ul>
+                                </div>
+                                <div class="match-vs">
+                                    <div class="match-vs-text">
+                                        <h4>MAK</h4>
+                                        <div class="vs">
+                                            <span>vs</span>
+                                        </div>
+                                        <h4>FCM</h4>
+                                    </div>
+                                </div>
+                                <div class="next-match-info">
+                                    <h5>Next Match</h5>
+                                    <h6>Friday, Jun 19 - 08:30PM EST</h6>
+                                    <p>Allianz Arena</p>
+                                </div>
+                            </div>
+
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo2">
+                                <span><img src="assets/images/club/club-img-3.svg" alt="img" class="img-fluid" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="upcoming-match-slider-content">
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo1">
+                                <span><img src="assets/images/club/club-img-4.svg" alt="img" class="img-fluid" /></span>
+                            </div>
+
+                            <div class="upcoming-match-middle-content">
+                                <div class="upcoming-match-count-down">
+                                    <ul class="timer timer_3">
+                                        <li class="days">3<span>D</span></li>
+                                        <li class="hours">01<span>H</span></li>
+                                        <li class="minutes">13<span>M</span></li>
+                                        <li class="seconds">56<span>S</span></li>
+                                    </ul>
+                                </div>
+                                <div class="match-vs">
+                                    <div class="match-vs-text">
+                                        <h4>FCM</h4>
+                                        <div class="vs">
+                                            <span>vs</span>
+                                        </div>
+                                        <h4>KRC</h4>
+                                    </div>
+                                </div>
+                                <div class="next-match-info">
+                                    <h5>Next Match</h5>
+                                    <h6>Sunday, Jun 19 - 10:30PM EST</h6>
+                                    <p>Allianz Arena</p>
+                                </div>
+                            </div>
+
+                            <div class="upcoming-match-club-logo upcoming-match-club-logo2">
+                                <span><img src="assets/images/club/club-img-2.svg" alt="img" class="img-fluid" /></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="upcoming-match-slider-content">
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo1">
-                            <span><img src="assets/images/club/club-img-4.svg" alt="img" class="img-fluid" /></span>
-                        </div>
-
-                        <div class="upcoming-match-middle-content">
-                            <div class="upcoming-match-count-down">
-                                <ul class="timer timer_2">
-                                    <li class="days">3<span>D</span></li>
-                                    <li class="hours">01<span>H</span></li>
-                                    <li class="minutes">13<span>M</span></li>
-                                    <li class="seconds">56<span>S</span></li>
-                                </ul>
-                            </div>
-                            <div class="match-vs">
-                                <div class="match-vs-text">
-                                    <h4>MAK</h4>
-                                    <div class="vs">
-                                        <span>vs</span>
-                                    </div>
-                                    <h4>FCM</h4>
-                                </div>
-                            </div>
-                            <div class="next-match-info">
-                                <h5>Next Match</h5>
-                                <h6>Friday, Jun 19 - 08:30PM EST</h6>
-                                <p>Allianz Arena</p>
-                            </div>
-                        </div>
-
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo2">
-                            <span><img src="assets/images/club/club-img-3.svg" alt="img" class="img-fluid" /></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="upcoming-match-slider-content">
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo1">
-                            <span><img src="assets/images/club/club-img-4.svg" alt="img" class="img-fluid" /></span>
-                        </div>
-
-                        <div class="upcoming-match-middle-content">
-                            <div class="upcoming-match-count-down">
-                                <ul class="timer timer_3">
-                                    <li class="days">3<span>D</span></li>
-                                    <li class="hours">01<span>H</span></li>
-                                    <li class="minutes">13<span>M</span></li>
-                                    <li class="seconds">56<span>S</span></li>
-                                </ul>
-                            </div>
-                            <div class="match-vs">
-                                <div class="match-vs-text">
-                                    <h4>FCM</h4>
-                                    <div class="vs">
-                                        <span>vs</span>
-                                    </div>
-                                    <h4>KRC</h4>
-                                </div>
-                            </div>
-                            <div class="next-match-info">
-                                <h5>Next Match</h5>
-                                <h6>Sunday, Jun 19 - 10:30PM EST</h6>
-                                <p>Allianz Arena</p>
-                            </div>
-                        </div>
-
-                        <div class="upcoming-match-club-logo upcoming-match-club-logo2">
-                            <span><img src="assets/images/club/club-img-2.svg" alt="img" class="img-fluid" /></span>
-                        </div>
-                    </div>
+                <div class="owl-nav">
+                    <div class="customPrevBtn"><img src="assets/images/icon/change_slide_arrow.svg" alt=""></div>
+                    <div class="customNextBtn"><img src="assets/images/icon/Change_slide_arrow2.svg" alt=""></div>
                 </div>
             </div>
         </div>
@@ -733,8 +742,8 @@
                                 <a class="next"><img src="assets/images/icon/slider-arrow-right.svg" alt="icon"></a>
                             </div>
                         </div>
-                        <div class="tranding-content">
-                            <div class="tranding-content-inner">
+                        <div class="tranding-content owl-carousel owl-theme owl-loaded">
+                            <div class="tranding-content-inner ">
                                 <div class="tranding-content-card">
                                     <div class="tranding-img">
                                         <img src="assets/images/bg/tranding-image-1.png" alt="img">
@@ -1022,13 +1031,12 @@
                     <div class="card-headings no-border">
                         <h2>Top Players</h2>
                         <div class="card-headings-slider-btns">
-                            <a class="prev"><img src="assets/images/icon/slider-arrow-left.svg" alt="icon"></a>
-                            <a class="next"><img src="assets/images/icon/slider-arrow-right.svg" alt="icon"></a>
+                            
                         </div>
                     </div>
                     <div class="top-player-content">
-                        <div class="row">
-                            <div class="col-lg-3">
+                        <div class="row top-player-slider">
+                            <div class="col-lg-12">
                                 <div class="top-player-card">
                                     <div class="top-player-card-overlay"></div>
                                     <div class="top-player-img">
@@ -1044,7 +1052,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-lg-3">
+                            <div class="col-lg-12">
                                 <div class="top-player-card">
                                     <div class="top-player-card-overlay"></div>
                                     <div class="top-player-img">
@@ -1060,7 +1068,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-lg-3">
+                            <div class="col-lg-12">
                                 <div class="top-player-card">
                                     <div class="top-player-card-overlay"></div>
                                     <div class="top-player-img">
@@ -1076,7 +1084,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-lg-3">
+                            <div class="col-lg-12">
                                 <div class="top-player-card">
                                     <div class="top-player-card-overlay"></div>
                                     <div class="top-player-img">
@@ -1088,6 +1096,22 @@
                                         <span><img src="assets/images/player/player-logo-4.svg" alt="img"></span>
                                         <h5>Ashley Brown</h5>
                                         <p>Centre Back</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-12">
+                                <div class="top-player-card">
+                                    <div class="top-player-card-overlay"></div>
+                                    <div class="top-player-img">
+                                        <span class="player-img"><img src="assets/images/player/player_3.png" alt="img"></span>
+                                        <span class="player-bg-ellips"><img src="assets/images/player/top-player-bg-ellipse.svg" alt=""></span>
+                                        <h3 class="player-number">10</h3>
+                                    </div>
+                                    <div class="top-player-text">
+                                        <span><img src="assets/images/player/player-logo-3.svg" alt="img"></span>
+                                        <h5>Pedro Floyd</h5>
+                                        <p>Forward</p>
                                     </div>
                                 </div>
                             </div>
@@ -1104,20 +1128,23 @@
         <div class="footer-slider-overlay1"></div>
         <div class="footer-slider-overlay2"><button><img src="assets/images/icon/plus.svg" alt="icon"></button></div>
         <div class="footer-slider-overlay3"></div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-1.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-2.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-3.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-4.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-5.png" alt="img"></span>
+        
+        <div class="footer-slider-inner">
+            <div class="footer-slider-img">
+                <span><img src="assets/images/bg/footer-slider-image-1.png" alt="img"></span>
+            </div>
+            <div class="footer-slider-img">
+                <span><img src="assets/images/bg/footer-slider-image-2.png" alt="img"></span>
+            </div>
+            <div class="footer-slider-img">
+                <span><img src="assets/images/bg/footer-slider-image-3.png" alt="img"></span>
+            </div>
+            <div class="footer-slider-img">
+                <span><img src="assets/images/bg/footer-slider-image-4.png" alt="img"></span>
+            </div>
+            <div class="footer-slider-img">
+                <span><img src="assets/images/bg/footer-slider-image-5.png" alt="img"></span>
+            </div>
         </div>
 <!--
         <div class="row footer-img-slider">
@@ -1128,22 +1155,22 @@
             </div>
             <div class="col-md-12">
                 <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
+                    <img src="assets/images/bg/footer-slider-image-2.png" alt="img">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
+                    <img src="assets/images/bg/footer-slider-image-3.png" alt="img">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
+                    <img src="assets/images/bg/footer-slider-image-4.png" alt="img">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
+                    <img src="assets/images/bg/footer-slider-image-5.png" alt="img">
                 </div>
             </div>
         </div>
@@ -1234,7 +1261,10 @@
     <script src="assets/js/time-counter.js"></script>
     <!-- slickSlider js -->
     <script src="assets/js/slick.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
     
+    <!-- Banner Slider -->
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -1249,7 +1279,7 @@
 
         function showSlides(n) {
             let i;
-            let slides = document.getElementsByClassName("mySlides");
+            let slides = document.getElementsByClassName("bannerSlider ");
             let dots = document.getElementsByClassName("dot");
             if (n > slides.length) {
                 slideIndex = 1
@@ -1268,16 +1298,18 @@
         }
     </script>
     
+    <!-- Top player Slider -->
     <script>
-        $('.upcoming-match-slider').slick({
+        $('.top-player-slider').slick({
             dots: false,
             infinite: true,
             speed: 300,
-            slidesToShow: 1,
+            slidesToShow: 4,
             slidesToScroll: 1,
         });
     </script>
     
+    <!-- Multi Slider -->
     <script>
         let slideMultiple = [1, 1];
         let slideId = ["featuredVideosSlider", "featuredNewsSlider"]
@@ -1302,6 +1334,57 @@
             }
             x[slideMultiple[no] - 1].style.display = "block";
         }
+    </script>
+    
+    <!-- upcoming-match-slider -->
+    <script>
+        $('.upcoming-match-slider').owlCarousel({
+            loop: true,
+            infinite: true,
+            margin: 10,
+            responsiveClass: true,
+            items: 1,
+            nav: true,
+            dots: false,
+        });
+
+        var owl = $('.upcoming-match-slider');
+        owl.owlCarousel();
+        // Go to the next item
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        // Go to the previous item
+        $('.customPrevBtn').click(function() {
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            owl.trigger('prev.owl.carousel', [300]);
+        });
+    </script>
+
+    <!-- upcoming-match-slider -->
+    <script>
+//        $('.tranding-content').owlCarousel({
+//            loop: true,
+//            margin: 10,
+//            responsiveClass: true,
+//            items: 1,
+//            nav: true,
+//            dots: false,
+//        });
+
+//        var owl = $('.upcoming-match-slider');
+//        owl.owlCarousel();
+//        // Go to the next item
+//        $('.customNextBtn').click(function() {
+//            owl.trigger('next.owl.carousel');
+//        })
+//        // Go to the previous item
+//        $('.customPrevBtn').click(function() {
+//            // With optional speed parameter
+//            // Parameters has to be in square bracket '[]'
+//            owl.trigger('prev.owl.carousel', [300]);
+//        });
     </script>
 
 </body>
