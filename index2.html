@@ -9,9 +9,11 @@
     <!-- slick Slider -->
     <link rel="stylesheet" href="assets/css/slick-theme.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <!-- Bootstrap CSS v5.2.0 -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
 <body>
@@ -751,9 +753,12 @@
                     <div class="content-card">
                         <div class="card-headings no-border">
                             <h2>Trending Now</h2>
+                            <div class="card-headings-slider-btns">
+                                
+                            </div>
                         </div>
                         <div class="tranding-content">
-                            <div class="tranding-content-inner">
+                            <div class="tranding-content-inner tranding-slider owl-carousel owl-theme">
                                 <div class="tranding-content-card">
                                     <div class="tranding-img">
                                         <img src="assets/images/bg/tranding-image-1.png" alt="img">
@@ -799,6 +804,10 @@
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="owl-nav tranding-slider-nav">
+                                <div class="trandingPrevBtn"><img src="assets/images/icon/slider-arrow-left.svg" alt=""></div>
+                                <div class="trandingNextBtn"><img src="assets/images/icon/slider-arrow-right.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -1036,53 +1045,31 @@
     
     <!-- footer slider section Start-->
     <div class="footer-slider-section">
-        <div class="footer-slider-overlay1"></div>
         <div class="footer-slider-overlay2"><button><img src="assets/images/icon/plus.svg" alt="icon"></button></div>
-        <div class="footer-slider-overlay3"></div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-1.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-2.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-3.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-4.png" alt="img"></span>
-        </div>
-        <div class="footer-slider-img">
-            <span><img src="assets/images/bg/footer-slider-image-5.png" alt="img"></span>
-        </div>
-<!--
-        <div class="row footer-img-slider">
-            <div class="col-md-12">
+        
+        <div class="footer-slider-inner">
+            <div class="footer-img-slider owl-carousel owl-theme">
                 <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
+                    <span><img src="assets/images/bg/footer-slider-image-1.png" alt="img"></span>
+                </div>
+                <div class="footer-slider-img">
+                    <span><img src="assets/images/bg/footer-slider-image-2.png" alt="img"></span>
+                </div>
+                <div class="footer-slider-img">
+                    <span><img src="assets/images/bg/footer-slider-image-3.png" alt="img"></span>
+                </div>
+                <div class="footer-slider-img">
+                    <span><img src="assets/images/bg/footer-slider-image-4.png" alt="img"></span>
+                </div>
+                <div class="footer-slider-img">
+                    <span><img src="assets/images/bg/footer-slider-image-5.png" alt="img"></span>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="footer-slider-img">
-                    <img src="assets/images/bg/footer-slider-image-1.png" alt="img">
-                </div>
+            <div class="owl-nav footer-img-slider-nav">
+                <div class="footerSliderPrevBtn"><img src="assets/images/icon/slider-arrow-left.svg" alt=""></div>
+                <div class="footerSliderNextBtn"><img src="assets/images/icon/slider-arrow-left.svg" alt=""></div>
             </div>
         </div>
--->
     </div>
     <!-- footer slider section end-->
     
@@ -1169,7 +1156,10 @@
     <script src="assets/js/time-counter.js"></script>
     <!-- slickSlider js -->
     <script src="assets/js/slick.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
     
+<!--
     <script>
         $('.upcoming-match-slider').slick({
             dots: false,
@@ -1179,6 +1169,7 @@
             slidesToScroll: 1,
         });
     </script>
+-->
     
     <script>
         let slideIndex = 1;
@@ -1237,6 +1228,56 @@
             }
             x[slideMultiple[no] - 1].style.display = "block";
         }
+    </script>
+    
+    <!-- Tranding slider -->
+    <script>
+        $('.tranding-slider').owlCarousel({
+            loop: true,
+            margin: 0,
+            responsiveClass: true,
+            items: 3,
+            nav: true,
+            dots: false,
+        });
+
+        var owl = $('.tranding-slider');
+        owl.owlCarousel();
+        // Go to the next item
+        $('.trandingNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        // Go to the previous item
+        $('.trandingPrevBtn').click(function() {
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            owl.trigger('prev.owl.carousel', [300]);
+        });
+    </script>
+    
+    <!-- Footer Img slider -->
+    <script>
+        $('.footer-img-slider').owlCarousel({
+            loop: true,
+            margin: 0,
+            responsiveClass: true,
+            items: 5,
+            nav: true,
+            dots: false,
+        });
+
+        var owl = $('.footer-img-slider');
+        owl.owlCarousel();
+        // Go to the next item
+        $('.footerSliderNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        // Go to the previous item
+        $('.footerSliderPrevBtn').click(function() {
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            owl.trigger('prev.owl.carousel', [300]);
+        });
     </script>
     
 </body>

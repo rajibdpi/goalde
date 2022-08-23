@@ -9,9 +9,11 @@
     <!-- slick Slider -->
     <link rel="stylesheet" href="assets/css/slick-theme.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <!-- Bootstrap CSS v5.2.0 -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
 <body>
@@ -219,49 +221,9 @@
     <script src="assets/js/time-counter.js"></script>
     <!-- slickSlider js -->
     <script src="assets/js/slick.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
     
-    <script>
-        $('.upcoming-match-slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
-    </script>
-    
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("index2Slide");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
     
 </body>
 

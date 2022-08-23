@@ -13848,6 +13848,20 @@ img {
   font-weight: 500;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.time-comment-react-section li a img {
+  height: auto;
+  width: auto !important;
 }
 
 .time-comment-react-section li a span {
@@ -13872,6 +13886,29 @@ img {
 /*-- tranding Content --*/
 .tranding-content {
   padding: 0px 25px;
+  position: relative;
+}
+
+.tranding-content .tranding-slider-nav {
+  position: absolute;
+  top: -47px;
+  right: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 46px;
+  cursor: pointer;
+}
+
+.tranding-content .tranding-slider-nav img {
+  height: 12px;
+  width: 6.55px;
 }
 
 .tranding-content .tranding-content-inner {
@@ -13887,7 +13924,7 @@ img {
 }
 
 .tranding-content .tranding-content-card {
-  width: 33.33333%;
+  width: 100%;
 }
 
 .tranding-content .tranding-content-card:nth-last-child(1) .tranding-text {
@@ -15520,6 +15557,12 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.footer-slider-section:hover .footer-slider-overlay2 {
+  display: none;
 }
 
 .footer-slider-section .footer-slider-inner {
@@ -15536,8 +15579,66 @@ img {
   width: 100%;
 }
 
+.footer-slider-section .footer-slider-inner .footerSliderPrevBtn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
+  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+}
+
+.footer-slider-section .footer-slider-inner .footerSliderPrevBtn img {
+  height: 15px;
+  width: 8.18px;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+.footer-slider-section .footer-slider-inner .footerSliderNextBtn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 9999;
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
+  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.footer-slider-section .footer-slider-inner .footerSliderNextBtn img {
+  height: 15px;
+  width: 8.18px;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
 .footer-slider-section .footer-slider-inner .footer-slider-img {
-  max-width: 20%;
+  max-width: 100%;
   width: 100%;
   overflow: hidden;
 }
@@ -15548,22 +15649,12 @@ img {
   overflow: hidden;
 }
 
-.footer-slider-section .footer-slider-overlay1 {
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  left: 0px;
-  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
-  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
-  z-index: 1;
-}
-
 .footer-slider-section .footer-slider-overlay2 {
   position: absolute;
   height: 100%;
   width: 20%;
   background: rgba(20, 21, 26, 0.5);
-  z-index: 1;
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15573,18 +15664,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.footer-slider-section .footer-slider-overlay3 {
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  right: 0px;
-  background: -webkit-gradient(linear, left top, right top, from(#14151B), to(rgba(20, 21, 27, 0)));
-  background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
-  z-index: 1;
-  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 /*-- 05. Footer Section Start --*/
