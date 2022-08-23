@@ -10,7 +10,7 @@ version: 1.0.0
 CSS table of content
 
 01. Header Section
-02. Banner Section
+02. index ii
     2.1. Banner Section
     2.2. match schedule section
     2.3. Featured News section
@@ -25,7 +25,9 @@ CSS table of content
     2.12 best player pool
     2.13 Transfer News Summer Card
     2.14 newsletter-section
-03. Footer Section
+03. index ii
+04. Breadcumbs section
+05. Footer Section
 
 -----------------*/
 
@@ -234,6 +236,30 @@ img {
                 filter: brightness(70%);
             }
         }
+        
+        & .card-headings-slider-btns{
+            height: 34px;
+            width: 80px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 16px;
+            gap: 35px;
+            &:after{
+                content: '';
+                width: 2px;
+                height: 16px;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.12);
+            }
+            & a {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
         &.card-headings-custom{
             padding: 20px 24px 13px 24px;
         }
@@ -244,6 +270,13 @@ img {
         & .card-headings {
             & h2 {
                color: #FFFFFF;
+            }
+            & .card-headings-slider-btns {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+
+                &:after {
+                    background: rgba(255, 255, 255, 0.12);
+                }
             }
         }
     }
@@ -282,7 +315,7 @@ img {
 
 /*-- 1. Header Section Start --*/
 .header-section{
-    height: 130px;
+    height: 129px;
     width: 100%;
     background: #14151A;
     position: relative;
@@ -297,7 +330,7 @@ img {
         right: 0px;
     }
     .main-header{
-        height: 130px;
+        height: 129px;
         border-right: 1px solid rgba(255, 255, 255, 0.08);
         display: flex;
         align-items: flex-start;
@@ -471,10 +504,107 @@ img {
             }
         }
     }
+    
+    &.header-section-light {
+        background: #FFFFFF;
+        .main-header {
+            border-right: none;
+            & .logo {
+                background: #F7F7F7;
+                position: relative;
+                border-left: 1px solid rgba(0, 0, 0, 0.12);
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
+                &:after {
+                    background: linear-gradient(90deg, rgba(238, 40, 64, 0) 0%, rgba(238, 40, 64, 0.5) 49.48%, rgba(238, 40, 64, 0) 100%);
+                }
+            }
+
+            & .header-content {
+                & .header-top-content {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    border-right: 1px solid rgba(0, 0, 0, 0.12);
+                    & .header-top-left {
+                        & p {
+                            @include text-style(14px, 500, 17px, #555555);
+
+                            & span {
+                                margin-right: 20px;
+                                filter: brightness(0.6);
+                            }
+                        }
+                    }
+
+                    & .header-top-right {
+                        & ul {
+                            & li {
+                                border-left: 1px solid rgba(0, 0, 0, 0.12);
+
+                                & button {
+                                    filter: brightness(0.01);
+                                }
+
+                                & .language-dropdown {
+                                    & select {
+                                        width: 100%;
+                                        padding: 5px 13px;
+                                        background: transparent;
+                                        border: none;
+                                        outline: none;
+                                        appearance: none;
+                                        color: #111111;
+
+                                        & option {
+                                            color: #000000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                & .header-menu {
+                    & .header-menu-inner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        height: 64px;
+                        & .header-menu-list {
+                            height: 100%;
+                            max-width: 507px;
+                            width: 100%;
+                            margin-right: 49px;
+                            & ul {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                height: 100%;
+
+                                & li {
+                                    & a {
+                                        color: #111111;
+                                    }
+                                }
+                            }
+                        }
+                        & .live-score-btn {
+                            width: 141px;
+                            height: 100%;
+                            border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+                            & button {
+                                background: rgba(238, 40, 64, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 /*-- Header Section End --*/
 
-/*-- 2. Index i --*/
+/*-- 2. Index i Start --*/
 /*-- 2.1. Banner Section Start --*/
 .banner-slider-section {
     position: relative;
@@ -493,7 +623,7 @@ img {
         & .next {
             display: none;
         }
-        & .mySlides {
+        & .bannerSlider {
             display: none;
             opacity: 1;
             display: flex;
@@ -584,14 +714,41 @@ img {
     background-repeat: no-repeat;
     background-size: cover; 
 
+    & .upcoming-match-section-inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        & .customPrevBtn{
+            position: absolute;
+            left: 0px;
+            z-index: 111;
+            cursor: pointer;
+            top: 47.5%;
+            & img{
+                width: auto;
+            }
+        }
+        & .customNextBtn{
+            position: absolute;
+            right: 0px;
+            z-index: 111;
+            cursor: pointer;
+            top: 47.5%;
+            & img{
+                width: auto;
+            }
+        }
+    }
     .upcoming-match-slider {
         padding-top: 68px;
-        padding-bottom: 56px;
+        padding-bottom: 40px;
         min-height: 370px;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         & .upcoming-match-slider-content {
             max-width: 928px;
             width: 100%;
@@ -706,9 +863,19 @@ img {
         position: relative;
         overflow: hidden;
         & .featured-img{
-            max-height: 415px;
+            height: 415px;
             width: 100%;
             position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0px;
+                top: 0px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.85%, rgba(0, 0, 0, 0.8) 100%);
+                z-index: 0;
+            }
             & img{
                 width: 100%;
                 height: 100%;
@@ -727,6 +894,7 @@ img {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                z-index: 2;
                 & img{
                     height: 22px;
                     width: 14px;
@@ -737,10 +905,10 @@ img {
             position: absolute;
             bottom: 22px;
             left: 24px;
+            z-index: 1;
             & button {
                 background: #EE2840;
                 border-radius: 100px;
-                width: 80px;
                 height: 25px;
                 padding: 5px 15px;
                 line-height: 14px;
@@ -897,7 +1065,13 @@ img {
         }
         a {
             @include text-style(14px, 500, 20px, rgba(255, 255, 255, 0.8));
-
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            & img{
+                height: auto;
+                width: auto !important;
+            }
             & span {
                 font-family: 'Inter';
                 margin-left: 10px;
@@ -921,7 +1095,21 @@ img {
 /*-- tranding Content --*/
 .tranding-content {
     padding: 0px 25px;
-
+    position: relative;
+    & .tranding-slider-nav {
+        position: absolute;
+        top: -47px;
+        right: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 46px;
+        cursor: pointer;
+        & img{
+            height: 12px;
+            width: 6.55px;
+        }
+    }
     & .tranding-content-inner {
         display: flex;
         align-items: center;
@@ -929,7 +1117,7 @@ img {
     }
 
     & .tranding-content-card {
-        width: 33.33333%;
+        width: 100%;
 
         &:nth-last-child(1) {
             & .tranding-text {
@@ -1009,8 +1197,36 @@ img {
     background-size: cover;
     padding: 70px 0px 40px 0px;
     & .top-player-content {
-        padding: 0px 25px 25px 25px;
-
+        padding: 0px 12px 25px 12px;
+        cursor: grab;
+        & .slick-slide{
+            padding: 0px 12.5px;
+        }
+        & .slick-next {
+            right: 33px;
+            top: -35px;
+            height: 12px;
+            width: 6.55px !important;
+            background: url(../images/icon/slider-arrow-right.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 100%;
+            z-index: 1111;
+        }
+        & .slick-prev {
+            right: 71px;
+            left: auto;
+            top: -35px;
+            height: 12px;
+            width: 6.55px !important;
+            background: url(../images/icon/slider-arrow-left.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 100%;
+            z-index: 1111;
+        }
         & .top-player-card {
             background: #14151B;
             position: relative;
@@ -1055,6 +1271,13 @@ img {
                 z-index: 4;
                 bottom: 17px;
                 text-align: center;
+                & span{
+                    & img{
+                        margin: auto;
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
                 & h5{
                     @include text-style(18px, 400, 24px, #FFFFFF);
                     margin-top: 13px;
@@ -1514,6 +1737,540 @@ img {
     }
 }
 
+/*-- Index i End --*/
+
+/*-- 03. Index ii Banner Section Start --*/
+.index2-banner-slider-section{
+    & .slideshow-container{
+        width: 100%;
+        position: relative;
+        height: 486px;
+        overflow: hidden;
+        & .index2Slide{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            & .slider-img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+        
+            }
+            & .index2-slider-text {
+                position: relative;
+                z-index: 2;
+                padding: 0px 30px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
+                & button {
+                    @include text-style(14px, 400, 14px, #FFFFFF);
+                    margin-bottom: 16px;
+                    background: #EE2840;
+                    border-radius: 100px;
+                    padding: 5px 15px;
+                }
+                & h3 {
+                    @include text-style(40px, 400, 50px, #FFFFFF);
+                    margin-bottom: 26px;
+                    max-width: 461px;
+                    width: 100%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        & .index2-slider-dots{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 86px;
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            z-index: 2;
+            & .dot {
+                cursor: pointer;
+                height: 12px;
+                width: 12px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 6px;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+                &.active{
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.index2-banner-bg{
+    background: url(../images/bg/index2-banner-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 0px 20px 0px;
+}
+.index2-upcomming-match-section{
+    background: url(../images/bg/index-2upcoming-match-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 160px;
+    .slideshow-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        & .upcoming-slide-prev{
+            position: absolute;
+            left: 0px;
+        }
+        & .upcoming-slide-next{
+            position: absolute;
+            right: 0px;
+        }
+    }
+    .index2-upcomming-content{
+        position: relative;
+        .index2-upcomming-left{
+            padding: 0px 25px;
+            min-height: 155px;
+            width: 98.5%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            & .index2-upcomming-left-team{
+                display: flex;
+                & .upcoming-team-logo{
+                    margin: 17px 24px 0px 24px;
+                    & img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+            & .index2-upcomming-left-team{
+                & .index2-upcomming-left-img {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.65%, #FFFFFF 100%);
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        border: 0px;
+                        left: 0px;
+                    }
+                }
+            }
+            & .index2-upcomming-left-schedule{
+                max-width: 268px;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                &:after {
+                    content: url(../images/bg/upcoming-bg-shapes.svg);
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    z-index: 0;
+                }
+                & .index2-upcomming-left-schedule-inner{
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                    padding-bottom: 14px;
+                    padding-top: 20px;
+                    & h4{
+                        @include text-style(14px, 400, 20px, #EE2840);
+                    }
+                    & .index2-upcomming-vs{
+                        max-width: 240px;
+                        padding: 5px 28px;
+                        width: 100%;
+                        background: #FFFFFF;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 16px auto;
+                        & h5{
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+        .match-prediction-section{
+            padding: 21px 25px 25px 25px;
+            & h3{
+                @include text-style(18px, 400, 120%, #FFFFFF);
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            & .match-prediction-list{
+                & li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    margin-bottom: 16px;
+                    &:nth-last-child(1){
+                        margin-bottom: 0px;
+                    }
+                    & span{
+                        font-family: 'Inter';
+                        @include text-style(14px, 500, 14px, #FFFFFF);
+                        text-transform: uppercase;
+                    }
+                    & .match-prediction-progress{
+                        height: 10px;
+                        background: rgba(255, 255, 255, 0.5);
+                        margin-right: 14px;
+                        &.progress-krc{
+                            max-width: 200px;
+                            width: 100%;
+                        }
+                        &.progress-bfc{
+                            max-width: 30px;
+                            width: 100%;
+                        }
+                        &.progress-draw{
+                            max-width: 67px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Index ii Banner Section End --*/
+
+
+/*-- 04. Breadcumbs section Start --*/
+.breadcumbs-section{
+    background: url(../images/bg/breadcumbs-banner.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .breadcumbs-left{
+        & .breadcumbs-menu{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            & a{
+                @include text-style(14px, 400, 14px, #FFFFFF);
+                text-transform: uppercase;
+                position: relative;
+                &:nth-last-child(1){
+                    opacity: 70%;
+                }
+            }
+        }
+        & h2{
+            @include text-style(30px, 400, 100%, #FFFFFF);
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    }
+    .breadcumbs-right{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        & ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            & li{
+                margin-left: 24px;
+                &:nth-child(1){
+                    margin-left: 0px;
+                }
+                & button{
+                    @include text-style(14px, 400, 20px, rgba(255, 255, 255, 0.7));
+                    padding: 11px 13px;
+                    text-transform: uppercase;
+                    &.active,
+                    &:hover{
+                        background: rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(5px);
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-- 04. Breadcumbs section End --*/
+
+/*-- Live Score Section Start --*/
+.live-score-section{
+    .live-score-inner {
+        padding: 70px 0px;
+        & .live-score-board {
+            background: #FFFFFF;
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            padding: 0px 25px;
+            min-height: 140px;
+            overflow: hidden;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+
+            & .live-score-board-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & .live-score-board-player {
+                    display: flex;
+                    align-items: center;
+                    gap: 55px;
+
+                    & .live-score-board-player-img {
+                        margin-top: 20px;
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            height: 100%;
+                            width: 100%;
+                            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.65%, #FFFFFF 100%);
+                            bottom: 0px;
+                            left: 0px;
+                            position: absolute;
+                        }
+                    }
+
+                    & .live-score-board-team-img {
+                        position: relative;
+
+                        & h6 {
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 10px;
+                            bottom: -30px;
+                            left: 0px;
+                            font-family: 'Inter';
+                            @include text-style(14px, 500, 20px, #555555);
+                            width: max-content;
+
+                            &.right-align {
+                                justify-content: flex-end;
+                                flex-direction: row-reverse;
+                                right: 0px;
+                                left: auto;
+                            }
+
+                            & span {
+                                & img {
+                                    height: 14px;
+                                    width: 14px;
+                                }
+                            }
+                        }
+
+                        & img {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+
+                & .live-score-content {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 302px;
+                    width: 100%;
+
+                    & h4 {
+                        @include text-style(18px, 400, 20px, #111111);
+                    }
+
+                    & .live-score {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: #FFFFFF;
+                        border: 1px solid rgba(0, 0, 0, 0.12);
+                        border-radius: 100px;
+                        padding: 12px 32px;
+                        height: 50px;
+                        max-width: 170px;
+                        width: 100%;
+                        margin: 0px 29px;
+                        position: relative;
+                        z-index: 1;
+
+                        & h5 {
+                            @include text-style(18px, 400, 20px, #111111);
+                        }
+
+                        & span {
+                            @include text-style(18px, 400, 20px, #111111);
+
+                            &.red {
+                                color: #EE2840;
+                            }
+                            &.gray {
+                                color: #999999;
+                            }
+                        }
+                    }
+
+                    .live-score-section-bg {
+                        position: absolute;
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-- Live Score Section End --*/
+
+/*-- Club Overview sub Banner Section Start --*/
+.club_overview-sub-banner-section{
+    background: url(../images/banner/sub-banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 370px;
+    width: 100%;
+    padding-top: 80px;
+    margin-bottom: 961px;
+    
+    .club_overview-sub-banner-content{
+        & .sub-banner-breadcumbs{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 21px;
+            & a{
+                @include text-style(14px, 400, 14px, #FFFFFF);
+                text-transform: uppercase;
+                &:nth-last-child(1){
+                    opacity: 70%;
+                }
+            }
+        }
+        & .club-overview-content{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+            & .club-overview-img{
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(5px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 170px;
+                width: 170px;
+                & img{
+                    height: 100px;
+                    width: 100%;
+                }
+            }
+            
+            & .club-overview-text{
+                padding-top: 5px;
+                margin-left: 29px;
+                & h2{
+                    @include text-style(30px, 400, 100%, #FFFFFF);
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+                & .club-overview-text-inner{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    & .club-overview-text-column{
+                        width: 24.5%;
+                        margin-right: 25px;
+                        margin-bottom: 14px;
+                        &:nth-last-child(1){
+                            margin-right: 0px;
+                        }
+                        & h6{
+                            @include text-style(14px, 400, 24px, rgba(255, 255, 255, 0.7));
+                            text-transform: uppercase;
+                        }
+                        & p{
+                            @include text-style(14px, 500, 24px, #FFFFFF);
+                        }
+                        & ul{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            & li{
+                                height: 16px;
+                                width: 16px;
+                                margin-right: 18px;
+                                &:nth-last-child(1){
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .club-overview-btns{
+            & ul{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                gap: 5px;
+                & li{
+                    & button{
+                        @include text-style(14px, 400, 20px, #FFFFFF);
+                        background: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(5px);
+                        width: 110px;
+                        height: 40px;
+                        text-transform: uppercase;
+                        &.active, 
+                        &:hover{
+                            color: #111111;
+                            background: #F3F3F3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-- Club Overview sub Banner Section End --*/
+
 /*-- radio custom --*/
 .radio-custom {
     .radio-container {
@@ -1572,46 +2329,97 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    & .footer-slider-img{
-        max-width: 20%;
-        width: 100%;
-        overflow: hidden;
-        & img {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
+    cursor: grab;
+    &:hover{ 
+        & .footer-slider-overlay2,{
+            display: none;
         }
     }
-    & .footer-slider-overlay1{
-        position: absolute;
-        height: 100%;
-        width: 20%;
-        left: 0px;
-        background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
-        z-index: 1;
+    & .footer-slider-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        & .footerSliderPrevBtn {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 9999;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 30px;
+            background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+            & img{
+                height: 15px;
+                width: 8.18px;
+                filter: brightness(100);
+            }
+        }
+        & .footerSliderNextBtn{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 9999;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 30px;
+            background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            & img{
+                height: 15px;
+                width: 8.18px;
+                filter: brightness(100);
+            }
+        }
+        & .footer-slider-img {
+            max-width: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            & img {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
     }
+//    & .footer-slider-overlay1{
+//        position: absolute;
+//        height: 100%;
+//        width: 20%;
+//        left: 0px;
+//        background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+//        z-index: 9999;
+//    }
     & .footer-slider-overlay2{
         position: absolute;
         height: 100%;
         width: 20%;
         background: rgba(20, 21, 26, 0.5);
-        z-index: 1;
+        z-index: 9999;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    & .footer-slider-overlay3{
-        position: absolute;
-        height: 100%;
-        width: 20%;
-        right: 0px;
-        background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
-        z-index: 1;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-    }
+//    & .footer-slider-overlay3{
+//        position: absolute;
+//        height: 100%;
+//        width: 20%;
+//        right: 0px;
+//        background: linear-gradient(90deg, #14151B 0%, rgba(20, 21, 27, 0) 100%);
+//        z-index: 9999;
+//        transform: matrix(-1, 0, 0, 1, 0, 0);
+//    }
 }
 
-/*-- 03. Footer Section Start --*/
+/*-- 05. Footer Section Start --*/
 .footer-area {
     background: #14151A;
     & .footer-section {
