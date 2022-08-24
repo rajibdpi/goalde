@@ -1,0 +1,60 @@
+@media screen and (max-width: 1440px) {
+  .container-xxl {
+    padding: 0px 25px;
+  }
+  /*-- header section --*/
+  .header-section .header-container {
+    padding: 0px;
+  }
+  .header-section .header-shape1 {
+    display: none;
+  }
+  .header-section .header-shape2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /*--  Index 1 banner Section --*/
+  .banner-slider-section .slideshow-container .bannerSlider .text {
+    top: 22%;
+  }
+  .banner-slider-section .slideshow-container .bannerSlider .text h2 {
+    font-size: 50px;
+  }
+  .banner-slider-section .slide-btns {
+    width: 250px;
+  }
+  .banner-slider-section .slide-btns .dot {
+    height: 50px;
+    width: 50px;
+  }
+  .index2-banner-slider-section .slideshow-container .index2Slide .index2-slider-text h3 {
+    font-size: 35px;
+  }
+  .result-table .result-table-row li span {
+    font-size: 12px;
+  }
+  .result-table .result-table-row li .score span {
+    font-size: 12px;
+  }
+  .latest-post-list ul li .latest-post-list-text h4 {
+    font-size: 15px;
+  }
+  /*-- point-table-section --*/
+  .point-table-section .point-table table tr td {
+    padding: 14px 0px;
+    font-size: 13px;
+  }
+  .newsletter-section .newsletter-content {
+    padding: 25px;
+  }
+  .newsletter-section .newsletter-content h4 {
+    margin: 12px auto;
+  }
+  .newsletter-section .newsletter-content form input,
+  .newsletter-section .newsletter-content form button {
+    margin-bottom: 23px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <!-- Bootstrap CSS v5.2.0 -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
@@ -22,7 +24,7 @@
     <div class="header-section" id="top">
         <span class="header-shape1"><img src="assets/images/bg/header-shape1.svg" alt="img"></span>
         <span class="header-shape2"><img src="assets/images/bg/header-shape2.svg" alt="img"></span>
-        <div class="container">
+        <div class="container-xxl header-container">
             <div class="main-header">
                 <div class="logo">
                     <a href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
@@ -130,7 +132,7 @@
     
     <!-- match schedule section Start-->
     <div class="upcoming-match-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="upcoming-match-section-inner">
                 <div class="upcoming-match-slider owl-carousel owl-theme row">
                     <div class="col-md-12">
@@ -253,7 +255,7 @@
     
     <!-- Featured Section Start -->
     <div class="featured-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-md-8">
                     <div class="content-card">
@@ -587,7 +589,7 @@
     
     <!-- featured section dark Start-->
     <div class="featured-section featured-section-dark">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-md-8">
                     <div class="content-card dark-card">
@@ -730,7 +732,7 @@
     <!-- featured section dark End-->
     
     <div class="tranding-popular-post-section">
-        <div class="container">
+        <div class="container-xxl">
             <!-- tranding section start -->
             <div class="row">
                 <div class="col-md-8">
@@ -1028,7 +1030,7 @@
     
     <!-- Top Player section start -->
     <div class="top-player-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="top-player-inner">
                 <div class="content-card dark-card">
                     <div class="card-headings no-border">
@@ -1161,7 +1163,7 @@
         <div class="footer-section">
             <span class="footer-shape1"><img src="assets/images/bg/footer-shape-1.svg" alt="img"></span>
             <span class="footer-shape2"><img src="assets/images/bg/footer-shape-2.svg" alt="img"></span>
-            <div class="container">
+            <div class="container-xxl">
                 <div class="sponsors-logo">
                     <ul>
                         <li><img src="assets/images/sponsors/1.png" alt="img" /></li>
@@ -1210,7 +1212,7 @@
                 </div>
             </div>
             <div class="main-footer">
-                <div class="container">
+                <div class="container-xxl">
                     <div class="main-footer-content">
                         <div class="footer-menu">
                             <ul>
@@ -1241,8 +1243,21 @@
     <script src="assets/js/slick.min.js"></script>
     <!-- owl carousel js -->
     <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/main.js"></script>
     
-    <!-- Banner Slider -->
+    <!-- Top player Slider -->
+    <script>
+        $('.top-player-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+        });
+    </script>
+    
+    <!-- index 1 Banner Slider -->
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -1276,18 +1291,7 @@
         }
     </script>
     
-    <!-- Top player Slider -->
-    <script>
-        $('.top-player-slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-        });
-    </script>
-    
-    <!-- Multi Slider -->
+    <!-- Multi slider -->
     <script>
         let slideMultiple = [1, 1];
         let slideId = ["featuredVideosSlider", "featuredNewsSlider"]
@@ -1314,87 +1318,6 @@
         }
     </script>
     
-    <!-- upcoming-match-slider -->
-    <script>
-        $(document).ready(function() {
-            $('.upcoming-match-slider').owlCarousel({
-                loop: true,
-                infinite: true,
-                margin: 10,
-                responsiveClass: true,
-                items: 1,
-                nav: true,
-                dots: false,
-            });
-
-            var owl = $('.upcoming-match-slider');
-            owl.owlCarousel();
-            // Go to the next item
-            $('.customNextBtn').click(function() {
-                owl.trigger('next.owl.carousel');
-            })
-            // Go to the previous item
-            $('.customPrevBtn').click(function() {
-                // With optional speed parameter
-                // Parameters has to be in square bracket '[]'
-                owl.trigger('prev.owl.carousel', [300]);
-            });
-        });
-    </script>
-
-    <!-- Tranding slider -->
-    <script>
-        $(document).ready(function() {
-            $('.tranding-slider').owlCarousel({
-                loop: true,
-                margin: 0,
-                responsiveClass: true,
-                items: 3,
-                nav: true,
-                dots: false,
-            });
-
-            var owl = $('.tranding-slider');
-            owl.owlCarousel();
-            // Go to the next item
-            $('.trandingNextBtn').click(function() {
-                owl.trigger('next.owl.carousel');
-            })
-            // Go to the previous item
-            $('.trandingPrevBtn').click(function() {
-                // With optional speed parameter
-                // Parameters has to be in square bracket '[]'
-                owl.trigger('prev.owl.carousel', [300]);
-            });
-        });
-    </script>
-    
-    <!-- Footer Img slider -->
-    <script>
-        $(document).ready(function() {
-            $('.footer-img-slider').owlCarousel({
-                loop: true,
-                margin: 0,
-                responsiveClass: true,
-                items: 5,
-                nav: true,
-                dots: false,
-            });
-
-            var owl = $('.footer-img-slider');
-            owl.owlCarousel();
-            // Go to the next item
-            $('.footerSliderNextBtn').click(function() {
-                owl.trigger('next.owl.carousel');
-            })
-            // Go to the previous item
-            $('.footerSliderPrevBtn').click(function() {
-                // With optional speed parameter
-                // Parameters has to be in square bracket '[]'
-                owl.trigger('prev.owl.carousel', [300]);
-            });
-        });
-    </script>
 
 </body>
 
