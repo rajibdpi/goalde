@@ -12711,7 +12711,7 @@ img {
 .content-card .card-headings h2, .content-card .card-headings .h2 {
   font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 32px;
   color: #111111;
   max-width: 261px;
   width: 100%;
@@ -14506,6 +14506,11 @@ img {
   padding: 0px 25px;
 }
 
+.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img img {
+  width: auto !important;
+  height: auto !important;
+}
+
 .transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-img .summer-img-overlay {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(22.92%, rgba(24, 48, 126, 0)), color-stop(87.5%, #18307E));
   background: linear-gradient(180deg, rgba(24, 48, 126, 0) 22.92%, #18307E 87.5%);
@@ -14620,9 +14625,8 @@ img {
   color: #FFFFFF;
 }
 
-.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots {
-  max-width: 90px;
-  width: 100%;
+.transfer-news-summer-card .owl-theme .owl-nav.disabled + .owl-dots {
+  width: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14633,18 +14637,28 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
-.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot {
+.transfer-news-summer-card .owl-theme .owl-nav.disabled + .owl-dots .owl-dot {
   height: 10px;
   width: 10px;
-  background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-.transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot.active, .transfer-news-summer-card .transfer-news-summer-card-inner .transfer-news-summer-dots .dot:hover {
-  background: rgba(255, 255, 255, 0.5);
+.transfer-news-summer-card .owl-theme .owl-nav.disabled + .owl-dots .owl-dot span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.transfer-news-summer-card .owl-theme .owl-nav.disabled + .owl-dots .owl-dot.active span, .transfer-news-summer-card .owl-theme .owl-nav.disabled + .owl-dots .owl-dot:hover span {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /*-- 2.14 newsletter-section --*/
@@ -15561,10 +15575,6 @@ img {
   cursor: grab;
 }
 
-.footer-slider-section:hover .footer-slider-overlay2 {
-  display: none;
-}
-
 .footer-slider-section .footer-slider-inner {
   position: relative;
   display: -webkit-box;
@@ -15643,27 +15653,33 @@ img {
   overflow: hidden;
 }
 
-.footer-slider-section .footer-slider-inner .footer-slider-img img {
+.footer-slider-section .footer-slider-inner .footer-slider-img:hover a:after {
+  display: block;
+}
+
+.footer-slider-section .footer-slider-inner .footer-slider-img a {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.footer-slider-section .footer-slider-inner .footer-slider-img a:after {
+  content: url(../images/icon/plus.svg);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(20, 21, 26, 0.5);
+  z-index: 9999;
+  padding: 30% 40.5%;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.footer-slider-section .footer-slider-inner .footer-slider-img a img {
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
-
-.footer-slider-section .footer-slider-overlay2 {
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  background: rgba(20, 21, 26, 0.5);
-  z-index: 9999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 /*-- 05. Footer Section Start --*/
@@ -15732,6 +15748,13 @@ img {
 
 .footer-area .footer-section .footer-social-link-list ul li {
   width: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li:hover .footer-link-card:after {
+  display: block;
 }
 
 .footer-area .footer-section .footer-social-link-list ul li .footer-link-card {
@@ -15741,6 +15764,19 @@ img {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   padding: 25px;
+  position: relative;
+}
+
+.footer-area .footer-section .footer-social-link-list ul li .footer-link-card:after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.08)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 100%);
+  display: none;
 }
 
 .footer-area .footer-section .footer-social-link-list ul li .footer-link-card .footer-logo {

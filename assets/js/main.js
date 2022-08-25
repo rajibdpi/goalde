@@ -73,3 +73,15 @@ $(document).ready(function () {
         owl.trigger('prev.owl.carousel', [300]);
     });
 });
+
+// Footer Img slider
+$(document).ready(function () {
+    $('.transfer-news-summer-slider').owlCarousel({
+        loop: true,
+        margin: 0,
+        responsiveClass: true,
+        items: 1,
+        nav: false,
+        dots: true,
+    });
+});
