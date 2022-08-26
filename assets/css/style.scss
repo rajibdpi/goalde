@@ -292,23 +292,52 @@ img {
     & button{
         width: 46.4%; 
         height: 50px;
-        padding: 10px 25px;
+        padding: 10px 5px;
         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        &:hover{
+            color: #FFFFFF !important;
+            & img{
+                filter: brightness(100);
+            }
+        }
+        & img{
+            margin-right: 9px;
+        }
+        
         &.faceboob-btn{
             background: rgba(24, 119, 242, 0.2);
             color: #1877F2;
+            &:hover{
+                background: #1877F2;
+            }
         }
         &.twitter-btn{
             background: rgba(29, 161, 242, 0.2);
             color: #1DA1F2;
+            &:hover{
+                background: #1DA1F2;
+            }
         }
         &.reddit-btn{
             background: rgba(255, 69, 0, 0.2);
             color: #FF4500;
+            &:hover{
+                background: #FF4500;
+                & img{
+                    filter: brightness(73) hue-rotate(170deg) brightness(28);
+                }
+            }
         }
         &.instagram-btn{
             background: rgba(225, 48, 108, 0.2);
             color: #E1306C;
+            &:hover{
+                background: #E1306C;
+            }
         }
     }
 }
@@ -488,6 +517,7 @@ img {
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            text-transform: uppercase;
                             &:after {
                                 content: '';
                                 background: #EE2840;
@@ -941,6 +971,17 @@ img {
 /*-- 2.4 Latest Update Content --*/
 .latest-update-content{
     padding: 24px;
+    .latest-post-list{
+    & ul {
+        & li{
+            & .latest-post-list-img{
+                max-width: 120px;
+                width: 100%;
+                height: 100px;   
+            }
+        }
+    }
+}
 }
 
 /*-- 2.5 Latest Post --*/
@@ -1127,7 +1168,7 @@ img {
 
         & .tranding-img {
             width: 100%;
-            height: 216px;
+            height: 230px;
             position: relative;
 
             & img {
@@ -1156,7 +1197,7 @@ img {
         }
 
         & .tranding-text {
-            padding: 25px 14px 22px 14px;
+            padding: 25px 14px;
             position: relative;
             width: 100%;
             border-right: 1px solid rgba(0, 0, 0, 0.12);

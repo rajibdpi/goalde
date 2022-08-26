@@ -12804,8 +12804,31 @@ img {
 .social-share-btns button {
   width: 46.4%;
   height: 50px;
-  padding: 10px 25px;
+  padding: 10px 5px;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+.social-share-btns button:hover {
+  color: #FFFFFF !important;
+}
+
+.social-share-btns button:hover img {
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+.social-share-btns button img {
+  margin-right: 9px;
 }
 
 .social-share-btns button.faceboob-btn {
@@ -12813,9 +12836,17 @@ img {
   color: #1877F2;
 }
 
+.social-share-btns button.faceboob-btn:hover {
+  background: #1877F2;
+}
+
 .social-share-btns button.twitter-btn {
   background: rgba(29, 161, 242, 0.2);
   color: #1DA1F2;
+}
+
+.social-share-btns button.twitter-btn:hover {
+  background: #1DA1F2;
 }
 
 .social-share-btns button.reddit-btn {
@@ -12823,9 +12854,22 @@ img {
   color: #FF4500;
 }
 
+.social-share-btns button.reddit-btn:hover {
+  background: #FF4500;
+}
+
+.social-share-btns button.reddit-btn:hover img {
+  -webkit-filter: brightness(73) hue-rotate(170deg) brightness(28);
+          filter: brightness(73) hue-rotate(170deg) brightness(28);
+}
+
 .social-share-btns button.instagram-btn {
   background: rgba(225, 48, 108, 0.2);
   color: #E1306C;
+}
+
+.social-share-btns button.instagram-btn:hover {
+  background: #E1306C;
 }
 
 /*-- 1. Header Section Start --*/
@@ -13093,6 +13137,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-transform: uppercase;
 }
 
 .header-section .main-header .header-content .header-menu .header-menu-inner .live-score-btn button:after {
@@ -13682,6 +13727,12 @@ img {
   padding: 24px;
 }
 
+.latest-update-content .latest-post-list ul li .latest-post-list-img {
+  max-width: 120px;
+  width: 100%;
+  height: 100px;
+}
+
 /*-- 2.5 Latest Post --*/
 .latest-post .latest-post-img {
   width: 100%;
@@ -13933,7 +13984,7 @@ img {
 
 .tranding-content .tranding-content-card .tranding-img {
   width: 100%;
-  height: 216px;
+  height: 230px;
   position: relative;
 }
 
@@ -13970,7 +14021,7 @@ img {
 }
 
 .tranding-content .tranding-content-card .tranding-text {
-  padding: 25px 14px 22px 14px;
+  padding: 25px 14px;
   position: relative;
   width: 100%;
   border-right: 1px solid rgba(0, 0, 0, 0.12);
