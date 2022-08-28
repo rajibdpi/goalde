@@ -284,6 +284,7 @@ img {
 
 /*-- social share btns --*/
 .social-share-btns{
+    @include text-style(14px, 400, 14px, #FFFFFF);
     padding: 25px 25px 5px 25px;
     display: flex;
     align-items: center;
@@ -989,8 +990,7 @@ img {
     & .latest-post-img {
         width: 100%;
         overflow: hidden;
-        max-height: 240px;
-        height: 100%;
+        height: 240px;
         & img {
             width: 100%;
             height: 100%;
@@ -1009,6 +1009,11 @@ img {
         & h3 {
             @include text-style(24px, 400, 30px, #14151B);
             margin-bottom: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
         }
 
         & p {
@@ -1016,6 +1021,11 @@ img {
             margin-bottom: 15px;
             max-width: 339px;
             width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
         }
         
     }
@@ -1072,9 +1082,15 @@ img {
             & .latest-post-list-text{
                 max-width: 210px;
                 width: 100%;
-                & h4{
+                & h4 {
                     @include text-style(16px, 400, 24px, #111111);
                     margin-bottom: 13px;
+                    overflow: hidden;
+                    max-width: 100%;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
                 }
             }
         }
@@ -1218,6 +1234,11 @@ img {
                 max-width: 187px;
                 width: 100%;
                 margin-bottom: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
             }
         }
     }
@@ -1533,6 +1554,9 @@ img {
                     @include text-style(14px, 500, 25px, #555555);
                     margin-bottom: 5px;
                     font-family: 'Inter';
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 & .progress-line{
                     height: 10px;
