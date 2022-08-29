@@ -33,6 +33,21 @@ $(document).ready(function () {
         items: 3,
         nav: true,
         dots: false,
+//        responsive: {
+//            0: {
+//                items: 1,
+//                nav: true
+//            },
+//            478: {
+//                items: 2;
+//                nav: false
+//            },
+//            767: {
+//                items: 3,
+//                nav: true,
+//                loop: false
+//            }
+//        }
     });
 
     var owl = $('.tranding-slider');

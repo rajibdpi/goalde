@@ -12884,6 +12884,10 @@ img {
   position: relative;
 }
 
+.header-section .mobile-menu-btn {
+  display: none;
+}
+
 .header-section .header-shape1 {
   position: absolute;
   top: 0px;
@@ -14157,7 +14161,7 @@ img {
 
 .top-player-section .top-player-content .top-player-card .top-player-img {
   position: relative;
-  height: 100%;
+  height: 270px;
   width: 100%;
   z-index: 1;
   display: -webkit-box;

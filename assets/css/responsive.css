@@ -200,7 +200,7 @@
     margin-top: 25px;
   }
   .latest-post-list ul.latest-post-list-inner {
-    gap: 3%;
+    gap: 6%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
@@ -221,6 +221,140 @@
   }
   .latest-post-list .time-comment-react-section li {
     width: auto !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .latest-update-content .latest-post-list {
+    margin-top: 0px;
+  }
+  .latest-update-content .latest-post-list ul.latest-post-list-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latest-update-content .latest-post-list ul.latest-post-list-inner li {
+    width: 100%;
+  }
+  .latest-update-content .latest-post-list ul.latest-post-list-inner li:nth-last-child(2) {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-section {
+    height: 70px;
+  }
+  .header-section .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 22px;
+    padding: 0px;
+    margin: 0px;
+    background: transparent;
+    -webkit-filter: brightness(100);
+            filter: brightness(100);
+    height: 25px;
+    width: 25px;
+  }
+  .header-section .main-header {
+    height: 70px;
+  }
+  .header-section .main-header .header-content .header-top-content {
+    height: 70px;
+    border: none;
+  }
+  .header-section .main-header .header-content .header-top-content .header-top-left {
+    width: 100%;
+    padding-right: 100px;
+  }
+  .header-section .main-header .header-content .header-top-content .header-top-right {
+    display: none;
+  }
+  .header-section .main-header .header-content .header-menu .header-menu-inner {
+    display: none;
+  }
+  .footer-area .footer-section .footer-social-link-list ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 4%;
+  }
+  .footer-area .footer-section .footer-social-link-list ul li {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+  .footer-area .footer-section .footer-social-link-list ul li:nth-child(1) {
+    width: 100%;
+  }
+  .footer-area .footer-section .footer-social-link-list ul li:nth-last-child(1), .footer-area .footer-section .footer-social-link-list ul li:nth-last-child(2) {
+    margin-bottom: 0px;
+  }
+  .footer-area .footer-section .main-footer .main-footer-content {
+    padding-top: 20px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-area .footer-section .main-footer .main-footer-content .footer-menu {
+    width: 100%;
+  }
+  .footer-area .footer-section .main-footer .main-footer-content .footer-menu ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-area .footer-section .main-footer .main-footer-content p {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .footer-area .footer-section .main-footer .main-footer-content .back-to-top {
+    position: absolute;
+    top: -20px;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  .time-comment-react-section li {
+    margin-right: 10px;
+  }
+  .time-comment-react-section li a {
+    font-size: 11px;
+  }
+  .time-comment-react-section li a span {
+    margin-left: 5px;
+  }
+  .latest-update-content .latest-post-list ul li .latest-post-list-img {
+    max-width: 90px;
+    width: 100%;
+    height: 75px;
+    margin-right: 10px;
+  }
+  .latest-post-list ul li .latest-post-list-img {
+    max-width: 90px;
+    width: 100%;
+    height: 75px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .latest-post-list ul.latest-post-list-inner li {
+    width: 100%;
+  }
+  .latest-post-list ul.latest-post-list-inner li:nth-last-child(2) {
+    margin-bottom: 25px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

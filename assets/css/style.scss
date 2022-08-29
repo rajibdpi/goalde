@@ -349,6 +349,9 @@ img {
     width: 100%;
     background: #14151A;
     position: relative;
+    & .mobile-menu-btn{
+        display: none;
+    }
     & .header-shape1 {
         position: absolute;
         top: 0px;
@@ -1309,7 +1312,7 @@ img {
             }
             & .top-player-img{
                 position: relative;
-                height: 100%;
+                height: 270px;
                 width: 100%;
                 z-index: 1;
                 display: flex;
