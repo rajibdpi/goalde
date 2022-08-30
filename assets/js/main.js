@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.upcoming-match-slider').owlCarousel({
         loop: true,
         infinite: true,
-        margin: 10,
+        margin: 0,
         responsiveClass: true,
         items: 1,
         nav: true,
@@ -89,7 +89,7 @@ $(document).ready(function () {
     });
 });
 
-// Footer Img slider
+// Transfer news slider
 $(document).ready(function () {
     $('.transfer-news-summer-slider').owlCarousel({
         loop: true,
@@ -99,4 +99,12 @@ $(document).ready(function () {
         nav: false,
         dots: true,
     });
+});
+
+$(".mobile-menu-btn").click(function () {
+    $(".mobile-menu").show();
+});
+
+$(".mobile-menu-left").click(function () {
+    $(".mobile-menu").hide();
 });
