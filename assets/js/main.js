@@ -101,10 +101,16 @@ $(document).ready(function () {
     });
 });
 
+
+// Mobile Menu js
 $(".mobile-menu-btn").click(function () {
     $(".mobile-menu").show();
 });
 
 $(".mobile-menu-left").click(function () {
+    $(".mobile-menu").hide();
+});
+
+$(".mobile-menu-close-btn").click(function () {
     $(".mobile-menu").hide();
 });
